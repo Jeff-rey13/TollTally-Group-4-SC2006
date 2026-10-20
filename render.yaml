@@ -1,0 +1,49 @@
+services:
+  - type: web
+    name: tolltally
+    runtime: docker
+    region: singapore
+    # the disk needs a paid plan
+    plan: starter
+    healthCheckPath: /api/health
+    disk:
+      name: tolltally-data
+      mountPath: /data
+      sizeGB: 1
+    envVars:
+      - key: DATABASE_URL
+        value: file:/data/tolltally.db
+      - key: SESSION_SECRET
+        generateValue: true
+      - key: ROUTING_PROVIDER
+        value: onemap
+      - key: PARKING_PROVIDER
+        value: table
+      - key: ONEMAP_EMAIL
+        sync: false
+      - key: ONEMAP_PASSWORD
+        sync: false
+      - key: ADMIN_EMAIL
+        sync: false
+      - key: ADMIN_PASSWORD
+        sync: false
+      - key: GOOGLE_ROUTES_API_KEY
+        sync: false
+      - key: LTA_ACCOUNT_KEY
+        sync: false
+      - key: TRAFFIC_PROVIDER
+        value: auto
+      - key: WEATHER_PROVIDER
+        value: auto
+      - key: SMTP_HOST
+        sync: false
+      - key: SMTP_PORT
+        value: '465'
+      - key: SMTP_SECURE
+        value: 'true'
+      - key: SMTP_USER
+        sync: false
+      - key: SMTP_PASS
+        sync: false
+      - key: MAIL_FROM
+        sync: false

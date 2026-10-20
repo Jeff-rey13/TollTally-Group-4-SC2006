@@ -1,0 +1,802 @@
+@import 'tailwindcss';
+
+/*
+ * TollTally visual language: Singapore road furniture.
+ * Sign-plate green for actions, asphalt for the panels that carry money, road-marking yellow only
+ * where ERP is charged, kerb grey for the ground. Barlow is a grotesk drawn from road and plate
+ * lettering; its condensed cut sets headings and amounts the way a direction sign sets place names.
+ */
+@theme {
+  --font-sans: 'Barlow', ui-sans-serif, system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  --font-display:
+    'Barlow Condensed', 'Barlow', ui-sans-serif, system-ui, 'Segoe UI', Arial Narrow, sans-serif;
+
+  --color-ink: #1e2629;
+  --color-ink-soft: #2c3639;
+  --color-muted: #536061;
+  --color-mint: #56c49a;
+  --color-mint-deep: #00704f;
+  --color-mint-darker: #00553c;
+  --color-mint-soft: #e0efe7;
+  --color-sand: #edf0ec;
+  --color-land: #e3e7e1;
+  --color-water: #bcd3de;
+  --color-park: #cfe0c6;
+  --color-line: #d9dfda;
+  --color-line-strong: #bdc6c0;
+  --color-tool: #f2f5f2;
+  --color-amber: #7a4d00;
+  --color-amber-mark: #f2b300;
+  --color-amber-soft: #fff3cc;
+  --color-parking: #1d4e9e;
+  --color-parking-soft: #e3eaf6;
+  --color-marking: #f2b300;
+  --color-asphalt: #1e2629;
+
+  --radius-control: 6px;
+  --radius-panel: 12px;
+  --radius-xl: 8px;
+  --radius-2xl: 10px;
+
+  --ease-out-quint: cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+:root {
+  --header-h: 76px;
+  --plate-edge: inset 0 -2px 0 rgb(0 0 0 / 0.18);
+  --float: 0 10px 30px rgb(30 38 41 / 0.14), 0 1px 2px rgb(30 38 41 / 0.08);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+body {
+  background-color: var(--color-sand);
+  color: var(--color-ink);
+  font-family: var(--font-sans);
+  font-size: 16px;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+/* Headings and big amounts use the condensed cut, like the place names on a direction sign. */
+h1,
+h2,
+.font-black,
+.display {
+  font-family: var(--font-display);
+  letter-spacing: -0.005em;
+}
+h1.font-black,
+.font-black {
+  font-weight: 800;
+}
+.tabular,
+.tbl,
+.font-black {
+  font-variant-numeric: tabular-nums;
+}
+
+:focus-visible {
+  outline: 3px solid var(--color-mint-deep);
+  outline-offset: 2px;
+}
+button,
+a,
+input,
+select {
+  -webkit-tap-highlight-color: transparent;
+}
+::selection {
+  background: var(--color-marking);
+  color: var(--color-ink);
+}
+.skip-link {
+  position: absolute;
+  left: 16px;
+  top: -80px;
+  z-index: 60;
+  padding: 12px 16px;
+  border-radius: var(--radius-control);
+  background: var(--color-ink);
+  color: white;
+  font-weight: 600;
+}
+.skip-link:focus {
+  top: 8px;
+}
+.card,
+form,
+section {
+  min-width: 0;
+}
+
+/* ---------- Header: a sign plate on a gantry ---------- */
+.tt-header {
+  position: relative;
+  z-index: 30;
+  padding: 12px 12px 0;
+  pointer-events: none;
+}
+.tt-bar,
+.tt-notices > * {
+  pointer-events: auto;
+}
+.tt-bar {
+  max-width: 80rem;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr);
+  grid-template-areas:
+    'brand account'
+    'nav nav';
+  align-items: center;
+  gap: 4px 16px;
+  padding: 6px 6px 6px 12px;
+  border-radius: var(--radius-panel);
+  border: 1px solid rgb(30 38 41 / 0.1);
+  background: rgb(255 255 255 / 0.92);
+  box-shadow: var(--float);
+  -webkit-backdrop-filter: blur(14px) saturate(1.2);
+  backdrop-filter: blur(14px) saturate(1.2);
+}
+.tt-bar--plain {
+  grid-template-areas: 'brand account';
+}
+.tt-bar--dark {
+  border-color: rgb(255 255 255 / 0.08);
+  background: rgb(30 38 41 / 0.96);
+  color: white;
+}
+.tt-brand {
+  grid-area: brand;
+  display: flex;
+  min-height: 44px;
+  align-items: center;
+  gap: 10px;
+  font-family: var(--font-display);
+  font-size: 23px;
+  font-weight: 800;
+  letter-spacing: 0;
+  color: var(--color-ink);
+}
+.tt-nav {
+  grid-area: nav;
+  display: flex;
+  gap: 2px;
+  min-width: 0;
+  overflow-x: auto;
+  scrollbar-width: none;
+}
+.tt-nav::-webkit-scrollbar {
+  display: none;
+}
+.tt-account {
+  grid-area: account;
+  display: flex;
+  min-width: 0;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 8px;
+}
+.tt-notices {
+  max-width: 80rem;
+  margin: 8px auto 0;
+  display: grid;
+  gap: 8px;
+}
+.nav-link {
+  position: relative;
+  display: flex;
+  flex: 1 0 auto;
+  min-height: 42px;
+  align-items: center;
+  justify-content: center;
+  border-radius: var(--radius-control);
+  padding: 0 10px;
+  font-size: 15px;
+  font-weight: 600;
+  white-space: nowrap;
+  color: var(--color-muted);
+  transition:
+    background-color 150ms,
+    color 150ms;
+}
+/* The active section is marked like a lane: a short solid bar under the label. */
+.nav-link::after {
+  content: '';
+  position: absolute;
+  left: 12px;
+  right: 12px;
+  bottom: 5px;
+  height: 3px;
+  border-radius: 2px;
+  background: var(--color-mint-deep);
+  transform: scaleX(0);
+  transition: transform 220ms var(--ease-out-quint);
+}
+.nav-link:hover {
+  background: var(--color-tool);
+  color: var(--color-ink);
+}
+.nav-link.active {
+  color: var(--color-ink);
+}
+.nav-link.active::after {
+  transform: scaleX(1);
+}
+.account-email {
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-size: 13px;
+  color: var(--color-muted);
+}
+.signout-btn {
+  flex: none;
+  min-height: 40px;
+  border-radius: var(--radius-control);
+  border: 1.5px solid rgb(30 38 41 / 0.18);
+  background: white;
+  padding: 0 14px;
+  font-weight: 600;
+  color: var(--color-ink);
+  transition: background-color 150ms;
+}
+.signout-btn:hover {
+  background: var(--color-tool);
+}
+.signout-btn:disabled {
+  opacity: 0.6;
+}
+.tt-bar--dark .tt-brand,
+.tt-bar--dark .nav-link.active {
+  color: white;
+}
+.tt-bar--dark .nav-link,
+.tt-bar--dark .account-email {
+  color: rgb(255 255 255 / 0.72);
+}
+.tt-bar--dark .nav-link:hover {
+  background: rgb(255 255 255 / 0.08);
+  color: white;
+}
+.tt-bar--dark .nav-link::after {
+  background: var(--color-marking);
+}
+.tt-bar--dark .signout-btn {
+  border-color: rgb(255 255 255 / 0.25);
+  background: transparent;
+  color: white;
+}
+.tt-bar--dark .signout-btn:hover {
+  background: rgb(255 255 255 / 0.08);
+}
+@media (min-width: 640px) {
+  .tt-header {
+    padding: 16px 24px 0;
+  }
+  .account-email {
+    font-size: 14px;
+  }
+}
+@media (min-width: 1024px) {
+  .tt-bar {
+    grid-template-columns: auto minmax(0, 1fr) auto;
+    grid-template-areas: 'brand nav account';
+    padding-left: 16px;
+  }
+  .nav-link {
+    flex: none;
+    padding: 0 14px;
+  }
+  .tt-bar--plain {
+    grid-template-columns: auto minmax(0, 1fr);
+    grid-template-areas: 'brand account';
+  }
+}
+
+/* ---------- Page frame ---------- */
+.page {
+  position: relative;
+  margin-top: calc(-1 * var(--header-h));
+}
+.page__band {
+  position: absolute;
+  inset: 0 0 auto 0;
+  height: calc(var(--header-h) + 15rem);
+  overflow: hidden;
+  pointer-events: none;
+}
+.page__band::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to bottom, rgb(237 240 236 / 0) 30%, var(--color-sand) 100%);
+}
+.page__body {
+  position: relative;
+  margin: 0 auto;
+  max-width: 76rem;
+  padding: calc(var(--header-h) + 1.75rem) 1rem 3.5rem;
+  animation: page-in 380ms var(--ease-out-quint) both;
+}
+.page__body--medium {
+  max-width: 56rem;
+}
+.page__body--narrow {
+  max-width: 34rem;
+}
+@media (min-width: 640px) {
+  .page__body {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+}
+@keyframes page-in {
+  from {
+    opacity: 0;
+    transform: translateY(6px);
+  }
+}
+
+/* ---------- Map stage (plan, estimate) ----------
+ * The panel and the map sit side by side, so the map is never covered. On a phone the map comes
+ * first, then the panel below it.
+ */
+.map-stage {
+  display: grid;
+  gap: 12px;
+  padding: 12px 12px 32px;
+}
+.map-stage__map {
+  position: relative;
+  height: max(300px, 46vh);
+  overflow: hidden;
+  border-radius: var(--radius-panel);
+  border: 1px solid var(--color-line);
+  background: var(--color-land);
+}
+.map-stage__content {
+  position: relative;
+  min-width: 0;
+}
+.stage-panel {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  border: 1px solid var(--color-line);
+  border-radius: var(--radius-panel);
+  background: white;
+  padding: 18px 16px 24px;
+}
+@media (min-width: 640px) {
+  .map-stage {
+    padding: 16px 24px 40px;
+  }
+  .stage-panel {
+    padding: 22px 24px 28px;
+  }
+}
+@media (min-width: 1024px) {
+  .map-stage {
+    grid-template-columns: minmax(380px, 440px) minmax(0, 1fr);
+    grid-template-areas: 'panel map';
+    align-items: start;
+    gap: 20px;
+  }
+  .map-stage__content {
+    grid-area: panel;
+  }
+  /* The map stays in view while a long estimate scrolls beside it. */
+  .map-stage__map {
+    grid-area: map;
+    position: sticky;
+    top: 16px;
+    height: calc(100vh - 32px);
+    min-height: 520px;
+  }
+}
+
+/* ---------- Controls ---------- */
+.switch {
+  position: relative;
+  flex: none;
+  width: 48px;
+  height: 28px;
+  margin: 0;
+  border-radius: 14px;
+  background: var(--color-line-strong);
+  cursor: pointer;
+  appearance: none;
+  -webkit-appearance: none;
+  transition: background-color 150ms;
+}
+.switch::after {
+  content: '';
+  position: absolute;
+  left: 3px;
+  top: 3px;
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  background: white;
+  box-shadow: 0 1px 3px rgb(0 0 0 / 0.25);
+  transition: transform 200ms var(--ease-out-quint);
+}
+.switch:checked {
+  background: var(--color-mint-deep);
+}
+.switch:checked::after {
+  transform: translateX(20px);
+}
+
+.segmented {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 4px;
+  padding: 4px;
+  border-radius: 8px;
+  border: 1px solid var(--color-line);
+  background: var(--color-tool);
+}
+.segmented__option {
+  display: grid;
+  min-height: 44px;
+  place-items: center;
+  border-radius: 5px;
+  padding: 0 6px;
+  text-align: center;
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--color-muted);
+  cursor: pointer;
+  transition:
+    background-color 150ms,
+    color 150ms;
+}
+.segmented__option:has(input:checked) {
+  background: white;
+  color: var(--color-ink);
+  box-shadow:
+    0 1px 3px rgb(30 38 41 / 0.14),
+    inset 0 -2px 0 var(--color-mint-deep);
+}
+.segmented__option:has(input:focus-visible) {
+  outline: 3px solid var(--color-mint-deep);
+  outline-offset: 1px;
+}
+
+select.input {
+  appearance: none;
+  -webkit-appearance: none;
+  padding-right: 2.5rem;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%231e2629' stroke-width='2.4' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='m6 9 6 6 6-6'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 0.75rem center;
+  background-size: 18px;
+}
+
+@layer components {
+  .btn-primary {
+    @apply inline-flex min-h-11 items-center justify-center gap-2 rounded-control bg-mint-deep px-5 text-[16px] font-semibold text-white transition-[background-color,transform] duration-150 hover:bg-mint-darker focus:outline-none focus-visible:ring-4 focus-visible:ring-mint-deep/30 active:translate-y-px disabled:cursor-not-allowed disabled:opacity-50;
+    box-shadow: var(--plate-edge);
+  }
+  .btn-secondary {
+    @apply inline-flex min-h-11 items-center justify-center gap-2 rounded-control border-[1.5px] border-ink/20 bg-white px-5 text-[16px] font-semibold text-ink transition-[background-color,border-color,transform] duration-150 hover:border-ink/35 hover:bg-tool focus:outline-none focus-visible:ring-4 focus-visible:ring-mint-deep/30 active:translate-y-px disabled:cursor-not-allowed disabled:opacity-50;
+  }
+  .btn-ghost {
+    @apply inline-flex min-h-10 items-center justify-center gap-2 rounded-control px-3 text-[15px] font-semibold text-mint-deep transition hover:bg-mint-soft focus:outline-none focus-visible:ring-4 focus-visible:ring-mint-deep/30 disabled:cursor-not-allowed disabled:opacity-50;
+  }
+  .btn-danger {
+    @apply inline-flex min-h-10 items-center justify-center gap-2 rounded-control px-3 text-[15px] font-semibold text-red-700 transition hover:bg-red-50 focus:outline-none focus-visible:ring-4 focus-visible:ring-red-400/40 disabled:cursor-not-allowed disabled:opacity-50;
+  }
+  .tool-btn {
+    @apply flex min-h-12 items-center gap-2.5 rounded-control border border-line bg-white px-3 text-left text-[15px] font-semibold text-ink transition-[background-color,border-color] duration-150 hover:border-mint-deep/40 hover:bg-mint-soft focus:outline-none focus-visible:ring-4 focus-visible:ring-mint-deep/30;
+  }
+  .input {
+    @apply min-h-12 w-full min-w-0 rounded-control border-[1.5px] border-line-strong bg-white px-3.5 text-base text-ink transition-[border-color,box-shadow] duration-150 placeholder:text-muted/60 hover:border-ink/35 focus:border-mint-deep focus:ring-4 focus:ring-mint-deep/15 focus:outline-none;
+  }
+  .label {
+    @apply mb-1.5 block text-[15px] font-semibold text-ink;
+  }
+  .card {
+    @apply rounded-panel border border-line bg-white p-5;
+  }
+  .glass {
+    @apply rounded-panel border border-ink/10 bg-white/95 backdrop-blur-md;
+    box-shadow: var(--float);
+  }
+  .eyebrow {
+    @apply text-[15px] font-semibold text-mint-deep;
+  }
+  .field-error {
+    @apply mt-1.5 text-sm font-medium text-red-700;
+  }
+  .hint {
+    @apply mt-1.5 text-[13px] leading-relaxed text-muted;
+  }
+  .tbl {
+    @apply relative w-full border-collapse text-[15px];
+  }
+  .tbl th {
+    @apply border-b-[1.5px] border-line-strong px-4 py-2.5 text-left text-[13px] font-semibold text-muted;
+  }
+  .tbl td {
+    @apply border-b border-line px-4 py-3 align-top;
+  }
+  .tbl tbody tr:last-child td {
+    @apply border-b-0;
+  }
+  .tbl tbody tr {
+    @apply transition-colors duration-100 hover:bg-tool/70;
+  }
+  .badge {
+    @apply inline-flex items-center rounded-[4px] px-2 py-0.5 text-xs font-semibold whitespace-nowrap;
+  }
+  .badge-mint {
+    @apply inline-flex items-center rounded-[4px] bg-mint-soft px-2 py-0.5 text-xs font-semibold whitespace-nowrap text-mint-darker;
+  }
+  .badge-amber {
+    @apply inline-flex items-center rounded-[4px] bg-amber-soft px-2 py-0.5 text-xs font-semibold text-amber;
+  }
+  .badge-grey {
+    @apply inline-flex items-center rounded-[4px] bg-tool px-2 py-0.5 text-xs font-semibold whitespace-nowrap text-muted;
+  }
+  .badge-red {
+    @apply inline-flex items-center rounded-[4px] bg-red-50 px-2 py-0.5 text-xs font-semibold whitespace-nowrap text-red-700;
+  }
+  .badge-dark {
+    @apply inline-flex items-center rounded-[4px] bg-ink px-2 py-0.5 text-xs font-semibold whitespace-nowrap text-white;
+  }
+}
+
+/*
+ * Panels that carry money (estimate total, history totals, top-up) sit on asphalt, with a dashed
+ * lane marking along the bottom edge. bg-ink is the class those panels already use.
+ */
+.bg-ink:where(.rounded-\[18px\], .rounded-2xl, .rounded-panel) {
+  position: relative;
+  border-radius: var(--radius-panel);
+  background-color: var(--color-asphalt);
+  background-image: repeating-linear-gradient(
+    90deg,
+    var(--color-marking) 0 18px,
+    transparent 18px 30px
+  );
+  background-size: 100% 3px;
+  background-repeat: no-repeat;
+  background-position: left bottom;
+}
+
+/* ---------- Loading ---------- */
+.lane-loader {
+  position: relative;
+  display: inline-block;
+  flex: none;
+  width: 44px;
+  height: 14px;
+  overflow: hidden;
+  border-radius: 3px;
+  background: var(--color-asphalt);
+}
+.lane-loader::before {
+  content: '';
+  position: absolute;
+  inset: 6px -24px 6px 0;
+  background: repeating-linear-gradient(90deg, white 0 8px, transparent 8px 14px);
+  animation: lane 600ms linear infinite;
+}
+@keyframes lane {
+  to {
+    transform: translateX(-14px);
+  }
+}
+.skeleton {
+  border-radius: var(--radius-control);
+  background: linear-gradient(
+      90deg,
+      rgb(255 255 255 / 0) 0%,
+      rgb(255 255 255 / 0.65) 50%,
+      rgb(255 255 255 / 0) 100%
+    )
+    var(--color-land);
+  background-size: 200% 100%;
+  animation: shimmer 1.4s ease-in-out infinite;
+}
+@keyframes shimmer {
+  from {
+    background-position: 150% 0;
+  }
+  to {
+    background-position: -50% 0;
+  }
+}
+
+/* ---------- Cookie notice ---------- */
+.cookie-notice {
+  position: fixed;
+  z-index: 70;
+  left: 12px;
+  right: 12px;
+  bottom: 12px;
+  max-width: 26rem;
+  padding: 16px 16px 14px;
+  border-radius: var(--radius-panel);
+  background: var(--color-asphalt);
+  color: white;
+  box-shadow: 0 18px 50px rgb(30 38 41 / 0.35);
+  animation: notice-in 480ms var(--ease-out-quint) 400ms both;
+}
+@media (min-width: 640px) {
+  .cookie-notice {
+    left: auto;
+    right: 24px;
+    bottom: 24px;
+  }
+}
+@keyframes notice-in {
+  from {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+}
+
+/* ---------- Footer: the road edge ---------- */
+.tt-footer {
+  position: relative;
+  background: var(--color-asphalt);
+  color: rgb(255 255 255 / 0.72);
+}
+.tt-footer::before {
+  content: '';
+  position: absolute;
+  inset: 12px 0 auto;
+  height: 3px;
+  background: repeating-linear-gradient(90deg, white 0 28px, transparent 28px 48px);
+  opacity: 0.35;
+}
+.tt-footer a {
+  color: white;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+/* ---------- Landing ---------- */
+.hero-road {
+  position: relative;
+  overflow: hidden;
+  background: var(--color-asphalt);
+  color: white;
+}
+.hero-route {
+  stroke-dasharray: 1;
+  stroke-dashoffset: 1;
+  animation: draw-route 1800ms var(--ease-out-quint) 250ms forwards;
+}
+.hero-charge {
+  opacity: 0;
+  animation: charge-on 300ms ease-out 1350ms forwards;
+}
+@keyframes draw-route {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+@keyframes charge-on {
+  to {
+    opacity: 1;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    transition-duration: 0ms !important;
+    animation-duration: 0ms !important;
+    animation-delay: 0ms !important;
+    animation-iteration-count: 1 !important;
+  }
+  .hero-route {
+    stroke-dashoffset: 0;
+  }
+  .hero-charge {
+    opacity: 1;
+  }
+}
+
+/* ---------- Map ---------- */
+.tt-map {
+  z-index: 0;
+  isolation: isolate;
+}
+.tt-map.leaflet-container {
+  background: var(--color-land);
+  font-family: var(--font-sans);
+}
+.tt-map .leaflet-control-attribution {
+  border-radius: 6px 0 0 0;
+  background: rgb(255 255 255 / 0.88);
+  font-size: 10px;
+}
+.tt-map .leaflet-bar {
+  overflow: hidden;
+  border: 0;
+  border-radius: 8px;
+  box-shadow: var(--float);
+}
+.tt-map .leaflet-bar a {
+  width: 44px;
+  height: 44px;
+  line-height: 44px;
+  font-size: 20px;
+  color: var(--color-ink);
+}
+.tt-map .leaflet-tooltip {
+  border: 0;
+  border-radius: 6px;
+  background: var(--color-asphalt);
+  color: white;
+  font: 600 13px/1.3 var(--font-sans);
+  padding: 6px 10px;
+  box-shadow: 0 4px 14px rgb(30 38 41 / 0.25);
+}
+.tt-map .leaflet-tooltip-top::before {
+  border-top-color: var(--color-asphalt);
+}
+.tt-pin {
+  display: grid;
+  place-items: center;
+  width: 30px;
+  height: 30px;
+  border-radius: 50% 50% 50% 0;
+  border: 3px solid #fff;
+  box-sizing: border-box;
+  transform: rotate(-45deg);
+  box-shadow: 0 2px 6px rgb(0 0 0 / 0.3);
+}
+.tt-pin > span {
+  transform: rotate(45deg);
+  color: #fff;
+  font:
+    700 14px/1 var(--font-display),
+    sans-serif;
+}
+.tt-incident {
+  display: grid;
+  place-items: center;
+  width: 24px;
+  height: 24px;
+  border-radius: 999px;
+  border: 2px solid #fff;
+  box-sizing: border-box;
+  background: #c2410c;
+  color: #fff;
+  font:
+    900 14px/1 var(--font-display),
+    sans-serif;
+  box-shadow: 0 1px 4px rgb(0 0 0 / 0.35);
+}
+
+.tt-gantry {
+  display: grid;
+  place-items: center;
+  width: 36px;
+  height: 20px;
+  border-radius: 3px;
+  border: 2px solid var(--color-asphalt);
+  box-sizing: border-box;
+  background: var(--color-marking);
+  color: var(--color-asphalt);
+  font:
+    800 11px/1 var(--font-display),
+    sans-serif;
+  letter-spacing: 0.04em;
+  box-shadow: 0 1px 4px rgb(0 0 0 / 0.35);
+}

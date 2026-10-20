@@ -1,0 +1,51 @@
+{
+  "name": "@tolltally/backend",
+  "version": "0.1.0",
+  "private": true,
+  "description": "TollTally API server (Express, Prisma, pure calculation module, routing and parking adapters)",
+  "type": "commonjs",
+  "scripts": {
+    "postinstall": "node scripts/ensure-env.cjs && prisma generate",
+    "dev": "node scripts/prepare-db.cjs && prisma migrate deploy && tsx prisma/seed.ts && tsx watch src/index.ts",
+    "test:serve": "node scripts/prepare-db.cjs && prisma migrate deploy && tsx prisma/seed.ts && tsx src/index.ts",
+    "build": "esbuild src/index.ts prisma/seed.ts prisma/import-erp.ts --bundle --platform=node --target=node20 --format=cjs --outdir=dist --entry-names=[name] --out-extension:.js=.cjs --external:@prisma/client --external:.prisma --external:prisma --log-level=warning",
+    "start": "node dist/index.cjs",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "typecheck": "tsc --noEmit -p tsconfig.json",
+    "db:migrate": "prisma migrate dev",
+    "db:seed": "tsx prisma/seed.ts",
+    "db:reset": "prisma migrate reset --force",
+    "db:import-erp": "tsx prisma/import-erp.ts",
+    "erp:check": "tsx prisma/check-erp.ts",
+    "feeds:check": "tsx prisma/check-feeds.ts",
+    "erp:calibrate": "tsx prisma/calibrate-erp.ts",
+    "db:studio": "prisma studio"
+  },
+  "prisma": {
+    "seed": "tsx prisma/seed.ts"
+  },
+  "dependencies": {
+    "@prisma/client": "6.19.3",
+    "@tolltally/shared": "*",
+    "decimal.js": "^10.6.0",
+    "express": "^5.2.1",
+    "express-session": "^1.19.0",
+    "nodemailer": "10.0.11",
+    "prisma": "6.19.3",
+    "zod": "^4.6.5"
+  },
+  "devDependencies": {
+    "@types/express": "^5.0.6",
+    "@types/express-session": "^1.19.0",
+    "@types/node": "^24.13.4",
+    "@types/nodemailer": "8.0.2",
+    "@types/supertest": "^7.2.1",
+    "esbuild": "^0.28.2",
+    "supertest": "^7.2.2",
+    "tsx": "^4.23.13",
+    "typescript": "^5.9.3",
+    "vite": "^7.3.6",
+    "vitest": "^4.1.11"
+  }
+}

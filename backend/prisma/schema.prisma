@@ -1,0 +1,365 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = env("DATABASE_URL")
+}
+
+enum Role {
+  DRIVER
+  ADMINISTRATOR
+}
+
+enum OwnershipType {
+  OWNED
+  RENTED
+}
+
+enum FuelType {
+  PETROL_92
+  PETROL_95
+  PETROL_98
+  DIESEL
+}
+
+enum VehicleClass {
+  PASSENGER_CAR_LGV_TAXI
+  MOTORCYCLE
+  HGV_SMALL_BUS
+  VHGV_BIG_BUS
+}
+
+enum DayType {
+  WEEKDAY
+  SATURDAY
+  SUNDAY_PUBLIC_HOLIDAY
+}
+
+enum TripStatus {
+  PLANNED
+  ESTIMATED
+  SAVED
+  COMPLETED
+}
+
+enum ComponentType {
+  FUEL
+  ROAD_USAGE
+  PARKING
+}
+
+enum FuelLevelUnit {
+  LITRES
+  TANK_FRACTION
+  PERCENT
+}
+
+model User {
+  id                   String               @id @default(cuid())
+  email                String               @unique
+  passwordHash         String
+  role                 Role                 @default(DRIVER)
+  registeredAt         DateTime             @default(now())
+  // When the person agreed to the privacy notice at registration, and which version they saw
+  privacyConsentAt     DateTime?
+  privacyNoticeVersion String?
+  vehicles             VehicleProfile[]
+  trips                Trip[]
+  resetTokens          PasswordResetToken[]
+}
+
+// One-time password reset link. Only a hash of the token is stored.
+model PasswordResetToken {
+  id        String    @id @default(cuid())
+  userId    String
+  user      User      @relation(fields: [userId], references: [id], onDelete: Cascade)
+  tokenHash String    @unique
+  expiresAt DateTime
+  usedAt    DateTime?
+  createdAt DateTime  @default(now())
+
+  @@index([userId])
+}
+
+model Session {
+  id        String   @id
+  sid       String   @unique
+  data      String
+  expiresAt DateTime
+}
+
+model VehicleProfile {
+  id              String        @id @default(cuid())
+  driverId        String
+  driver          User          @relation(fields: [driverId], references: [id], onDelete: Cascade)
+  displayName     String
+  make            String?
+  model           String?
+  ownershipType   OwnershipType
+  fuelType        FuelType
+  vehicleClass    VehicleClass  @default(PASSENGER_CAR_LGV_TAXI)
+  // litres per 100 km
+  consumptionRate Decimal
+  // litres
+  tankCapacity    Decimal
+  isArchived      Boolean       @default(false)
+  createdAt       DateTime      @default(now())
+  trips           Trip[]
+
+  @@index([driverId])
+}
+
+model VehicleEfficiencyRecord {
+  id              String    @id @default(cuid())
+  make            String
+  model           String
+  consumptionRate Decimal
+  // Optional catalogue details used by the vehicle picker
+  tankCapacity    Decimal?
+  fuelType        FuelType?
+  source          String?
+  // MOTORCYCLE for bikes; anything else is listed as a car
+  vehicleClass    VehicleClass @default(PASSENGER_CAR_LGV_TAXI)
+  updatedAt       DateTime  @updatedAt
+
+  @@unique([make, model])
+}
+
+model Trip {
+  id                     String         @id @default(cuid())
+  driverId               String
+  driver                 User           @relation(fields: [driverId], references: [id], onDelete: Cascade)
+  vehicleProfileId       String
+  vehicleProfile         VehicleProfile @relation(fields: [vehicleProfileId], references: [id])
+  originName             String
+  originLat              Float
+  originLng              Float
+  destinationName        String
+  destinationLat         Float
+  destinationLng         Float
+  // stored in UTC, entered in Singapore time
+  departureTime          DateTime
+  isReturnTrip           Boolean        @default(false)
+  returnDepartureTime    DateTime?
+  parkingDurationMin     Int
+  parkingDurationAssumed Boolean        @default(false)
+  status                 TripStatus     @default(PLANNED)
+  savedAt                DateTime?
+  revision               Int            @default(0)
+  vehicleSnapshot        String?
+  createdAt              DateTime       @default(now())
+  routes                 Route[]
+  estimate               CostEstimate?
+  topUpPlan              FuelTopUpPlan?
+  log                    TripLog?
+
+  @@index([driverId, status])
+}
+
+model Route {
+  id             String  @id @default(cuid())
+  tripId         String
+  trip           Trip    @relation(fields: [tripId], references: [id], onDelete: Cascade)
+  isReturnLeg    Boolean @default(false)
+  distanceKm     Decimal
+  drivingTimeSec Int
+  // encoded polyline from the provider
+  geometry       String
+  provider       String
+  // JSON list of { from, name }: the road each stretch of the route is on, when known
+  roads          String?
+
+  @@index([tripId])
+}
+
+model CostEstimate {
+  id                String          @id @default(cuid())
+  tripId            String          @unique
+  trip              Trip            @relation(fields: [tripId], references: [id], onDelete: Cascade)
+  total             Decimal
+  totalIsLowerBound Boolean
+  lowerBound        Decimal
+  // null while any component is unavailable or excluded
+  upperBound        Decimal?
+  // JSON array of assumption sentences
+  assumptions       String          @default("[]")
+  pricingPolicy     String?
+  // calculation time in ms
+  durationMs        Int             @default(0)
+  calculatedAt      DateTime        @default(now())
+  components        CostComponent[]
+}
+
+model CostComponent {
+  id                String                @id @default(cuid())
+  estimateId        String
+  estimate          CostEstimate          @relation(fields: [estimateId], references: [id], onDelete: Cascade)
+  type              ComponentType
+  isReturnLeg       Boolean               @default(false)
+  amount            Decimal?
+  lowerBound        Decimal?
+  upperBound        Decimal?
+  isAvailable       Boolean
+  unavailableReason String?
+  sourceName        String?
+  sourceRecordedAt  DateTime?
+  isStale           Boolean               @default(false)
+  // JSON snapshot of the values used
+  detail            String?
+  fuelPriceId       String?
+  fuelPrice         FuelPrice?            @relation(fields: [fuelPriceId], references: [id])
+  parkingRateId     String?
+  parkingRate       ParkingRate?          @relation(fields: [parkingRateId], references: [id])
+  crossings         ChargePointCrossing[]
+
+  @@index([estimateId])
+}
+
+model ChargePoint {
+  id         String                @id @default(cuid())
+  // stable key used by the seed and importer
+  code       String                @unique
+  name       String
+  zoneId     String
+  lat        Float
+  lng        Float
+  // charged direction of travel, degrees clockwise from north
+  headingDeg Float
+  // names of the road the gantry stands on, separated by "|"
+  roads      String?
+  isActive   Boolean               @default(true)
+  rates      ErpRate[]
+  crossings  ChargePointCrossing[]
+}
+
+model ErpRate {
+  id                String                @id @default(cuid())
+  chargePointId     String
+  chargePoint       ChargePoint           @relation(fields: [chargePointId], references: [id], onDelete: Cascade)
+  vehicleClass      VehicleClass
+  dayType           DayType
+  // HH:MM Singapore time
+  startTime         String
+  endTime           String
+  rate              Decimal
+  effectiveDate     DateTime
+  recordedAt        DateTime              @default(now())
+  isWithdrawn       Boolean               @default(false)
+  crossings         ChargePointCrossing[] @relation("applied")
+  adjacentCrossings ChargePointCrossing[] @relation("adjacent")
+
+  @@index([chargePointId, vehicleClass, dayType])
+}
+
+model ChargePointCrossing {
+  id                    String        @id @default(cuid())
+  componentId           String
+  component             CostComponent @relation(fields: [componentId], references: [id], onDelete: Cascade)
+  chargePointId         String
+  chargePointName       String?
+  ratePeriod            String?
+  chargePoint           ChargePoint   @relation(fields: [chargePointId], references: [id])
+  erpRateId             String?
+  erpRate               ErpRate?      @relation("applied", fields: [erpRateId], references: [id])
+  adjacentErpRateId     String?
+  adjacentErpRate       ErpRate?      @relation("adjacent", fields: [adjacentErpRateId], references: [id])
+  estimatedCrossingTime DateTime
+  dayType               DayType
+  charge                Decimal?
+  lowerBound            Decimal?
+  upperBound            Decimal?
+  nearPeriodBoundary    Boolean       @default(false)
+  isExcluded            Boolean       @default(false)
+  exclusionReason       String?
+
+  @@index([componentId])
+}
+
+model ParkingRate {
+  id                String          @id @default(cuid())
+  code              String          @unique
+  carparkName       String
+  lat               Float
+  lng               Float
+  ratePerPeriod     Decimal
+  chargingPeriodMin Int
+  roundingRule      String          @default("CEIL")
+  // which vehicles this rate is for: MOTORCYCLE, or any other class for cars and larger vehicles
+  vehicleClass      VehicleClass    @default(PASSENGER_CAR_LGV_TAXI)
+  source            String
+  recordedAt        DateTime        @default(now())
+  components        CostComponent[]
+}
+
+model FuelPrice {
+  id          String          @id @default(cuid())
+  brand       String
+  fuelType    FuelType
+  // SGD per litre
+  price       Decimal
+  recordedAt  DateTime        @default(now())
+  isWithdrawn Boolean         @default(false)
+  components  CostComponent[]
+  topUpPlans  FuelTopUpPlan[]
+
+  @@index([fuelType, isWithdrawn, recordedAt])
+}
+
+model FuelTopUpPlan {
+  id                    String        @id @default(cuid())
+  tripId                String        @unique
+  trip                  Trip          @relation(fields: [tripId], references: [id], onDelete: Cascade)
+  fuelPriceId           String
+  fuelPrice             FuelPrice     @relation(fields: [fuelPriceId], references: [id])
+  pickUpLevel           Decimal
+  requiredReturnLevel   Decimal
+  levelUnit             FuelLevelUnit
+  pickUpVolume          Decimal
+  requiredReturnVolume  Decimal
+  tripFuelVolume        Decimal
+  projectedReturnVolume Decimal
+  shortfall             Decimal
+  topUpVolume           Decimal
+  estimatedCost         Decimal
+  sourceSnapshot        String?
+  createdAt             DateTime      @default(now())
+}
+
+model TripLog {
+  id                    String   @id @default(cuid())
+  tripId                String   @unique
+  trip                  Trip     @relation(fields: [tripId], references: [id], onDelete: Cascade)
+  actualFuelCost        Decimal?
+  actualRoadUsageCharge Decimal?
+  actualParkingFee      Decimal?
+  actualTotal           Decimal
+  varianceAbsolute      Decimal?
+  variancePercent       Decimal?
+  loggedAt              DateTime @default(now())
+}
+
+model PublicHoliday {
+  // YYYY-MM-DD in Singapore time
+  date String @id
+  name String
+}
+
+// Request counts per hour and endpoint for the administrator's traffic view. Holds no addresses,
+// users or request contents, only totals.
+model TrafficHour {
+  // start of the hour, UTC
+  hour         DateTime
+  // method and path with record IDs replaced, e.g. "POST /api/trips", or "APP OPEN" when the app
+  // is opened in a browser tab
+  endpoint     String
+  requests     Int      @default(0)
+  clientErrors Int      @default(0)
+  serverErrors Int      @default(0)
+  rateLimited  Int      @default(0)
+  totalMs      Int      @default(0)
+  maxMs        Int      @default(0)
+
+  @@id([hour, endpoint])
+}

@@ -1,0 +1,6 @@
+[
+  { "brand": "Reference (update via Petrol prices)", "fuelType": "PETROL_92", "price": "2.68" },
+  { "brand": "Reference (update via Petrol prices)", "fuelType": "PETROL_95", "price": "2.78" },
+  { "brand": "Reference (update via Petrol prices)", "fuelType": "PETROL_98", "price": "3.25" },
+  { "brand": "Reference (update via Petrol prices)", "fuelType": "DIESEL", "price": "2.52" }
+]

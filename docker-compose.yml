@@ -1,0 +1,20 @@
+services:
+  app:
+    build: .
+    ports:
+      - '3000:3000'
+    environment:
+      NODE_ENV: development
+      DATABASE_URL: file:/data/tolltally.db
+      SESSION_SECRET: ${SESSION_SECRET:-change-me-tolltally-compose-secret}
+      ROUTING_PROVIDER: ${ROUTING_PROVIDER:-mock}
+      ONEMAP_EMAIL: ${ONEMAP_EMAIL:-}
+      ONEMAP_PASSWORD: ${ONEMAP_PASSWORD:-}
+      GOOGLE_ROUTES_API_KEY: ${GOOGLE_ROUTES_API_KEY:-}
+      ADMIN_EMAIL: ${ADMIN_EMAIL:-admin@tolltally.local}
+      ADMIN_PASSWORD: ${ADMIN_PASSWORD:-Admin1234}
+    volumes:
+      - data:/data
+
+volumes:
+  data:

@@ -1,0 +1,3107 @@
+{
+  "note": "LTA base ERP rates for passenger cars, taxis and light goods vehicles with effect from 2026-09-07, from the OneMotoring rate tables, placed at the gantry positions in LTA's gantry map (data.gov.sg). Charged directions are inferred from the location descriptions. Rebuild with backend/prisma/tools/build_erp_data.py when LTA publishes new rates.",
+  "effectiveDate": "2026-09-07",
+  "chargePoints": [
+    {
+      "code": "G1",
+      "name": "Victoria Street (CBD cordon), gantry 1",
+      "zoneId": "G1",
+      "lat": 1.300404,
+      "lng": 103.855752,
+      "headingDeg": 221,
+      "roads": [
+        "VICTORIA STREET"
+      ],
+      "rates": {
+        "WEEKDAY": [
+          [
+            "07:00",
+            "20:00",
+            "0.00"
+          ]
+        ],
+        "SATURDAY": [
+          [
+            "07:00",
+            "20:00",
+            "0.00"
+          ]
+        ]
+      },
+      "position": "LTA gantry map"
+    },
+    {
+      "code": "G2",
+      "name": "Nicoll Highway (CBD cordon), gantry 2",
+      "zoneId": "G2",
+      "lat": 1.299633,
+      "lng": 103.861945,
+      "headingDeg": 230,
+      "roads": [
+        "NICOLL HIGHWAY"
+      ],
+      "rates": {
+        "WEEKDAY": [
+          [
+            "07:00",
+            "20:00",
+            "0.00"
+          ]
+        ],
+        "SATURDAY": [
+          [
+            "07:00",
+            "20:00",
+            "0.00"
+          ]
+        ]
+      },
+      "position": "LTA gantry map"
+    },
+    {
+      "code": "G3",
+      "name": "Eu Tong Sen Street (CBD cordon), gantry 3",
+      "zoneId": "G3",
+      "lat": 1.280697,
+      "lng": 103.84028,
+      "headingDeg": 39,
+      "roads": [
+        "EU TONG SEN STREET"
+      ],
+      "rates": {
+        "WEEKDAY": [
+          [
+            "07:00",
+            "20:00",
+            "0.00"
+          ]
+        ],
+        "SATURDAY": [
+          [
+            "07:00",
+            "20:00",
+            "0.00"
+          ]
+        ]
+      },
+      "position": "LTA gantry map"
+    },
+    {
+      "code": "G4",
+      "name": "Orchard Link (Orchard cordon), gantry 4",
+      "zoneId": "G4",
+      "lat": 1.300642,
+      "lng": 103.834937,
+      "headingDeg": 30,
+      "roads": [
+        "ORCHARD LINK"
+      ],
+      "rates": {
+        "WEEKDAY": [
+          [
+            "11:00",
+            "11:05",
+            "0.50"
+          ],
+          [
+            "11:05",
+            "18:55",
+            "1.00"
+          ],
+          [
+            "18:55",
+            "19:00",
+            "0.50"
+          ]
+        ],
+        "SATURDAY": [
+          [
+            "07:00",
+            "20:00",
+            "0.00"
+          ]
+        ]
+      },
+      "position": "LTA gantry map"
+    },
+    {
+      "code": "G5",
+      "name": "Lim Teck Kim Road (CBD cordon), gantry 5",
+      "zoneId": "G5",
+      "lat": 1.273467,
+      "lng": 103.841867,
+      "headingDeg": 87,
+      "roads": [
+        "LIM TECK KIM ROAD"
+      ],
+      "rates": {
+        "WEEKDAY": [
+          [
+            "07:00",
+            "20:00",
+            "0.00"
+          ]
+        ],
+        "SATURDAY": [
+          [
+            "07:00",
+            "20:00",
+            "0.00"
+          ]
+        ]
+      },
+      "position": "LTA gantry map"
+    },
+    {
+      "code": "G6",
+      "name": "Anson Road (CBD cordon), gantry 6",
+      "zoneId": "G6",
+      "lat": 1.273307,
+      "lng": 103.844415,
+      "headingDeg": 39,
+      "roads": [
+        "ANSON ROAD"
+      ],
+      "rates": {
+        "WEEKDAY": [
+          [
+            "07:00",
+            "20:00",
+            "0.00"
+          ]
+        ],
+        "SATURDAY": [
+          [
+            "07:00",
+            "20:00",
+            "0.00"
+          ]
+        ]
+      },
+      "position": "LTA gantry map"
+    },
+    {
+      "code": "G7",
+      "name": "Tanjong Pagar Road (CBD cordon), gantry 7",
+      "zoneId": "G7",
+      "lat": 1.273002,
+      "lng": 103.843099,
+      "headingDeg": 13,
+      "roads": [
+        "TANJONG PAGAR ROAD"
+      ],
+      "rates": {
+        "WEEKDAY": [
+          [
+            "07:00",
+            "20:00",
+            "0.00"
+          ]
+        ],
+        "SATURDAY": [
+          [
+            "07:00",
+            "20:00",
+            "0.00"
+          ]
+        ]
+      },
+      "position": "LTA gantry map"
+    },
+    {
+      "code": "G9",
+      "name": "Bencoolen Street (CBD cordon), gantry 9",
+      "zoneId": "G9",
+      "lat": 1.302718,
+      "lng": 103.853495,
+      "headingDeg": 220,
+      "roads": [
+        "BENCOOLEN STREET"
+      ],
+      "rates": {
+        "WEEKDAY": [
+          [
+            "07:00",
+            "20:00",
+            "0.00"
+          ]
+        ],
+        "SATURDAY": [
+          [
+            "07:00",
+            "20:00",
+            "0.00"
+          ]
+        ]
+      },
+      "position": "LTA gantry map, unlabelled feature UNK matched by location"
+    },
+    {
+      "code": "G10",
+      "name": "Queen Street (CBD cordon), gantry 10",
+      "zoneId": "G10",
+      "lat": 1.301291,
+      "lng": 103.854948,
+      "headingDeg": 224,
+      "roads": [
+        "QUEEN STREET"
+      ],
+      "rates": {
+        "WEEKDAY": [
+          [
+            "07:00",
+            "20:00",
+            "0.00"
+          ]
+        ],
+        "SATURDAY": [
+          [
+            "07:00",
+            "20:00",
+            "0.00"
+          ]
+        ]
+      },
+      "position": "LTA gantry map"
+    },
+    {
+      "code": "G11",
+      "name": "North Bridge Road (CBD cordon), gantry 11",
+      "zoneId": "G11",
+      "lat": 1.299621,
+      "lng": 103.856457,
+      "headingDeg": 217,
+      "roads": [
+        "NORTH BRIDGE ROAD"
+      ],
+      "rates": {
+        "WEEKDAY": [
+          [
+            "07:00",
+            "20:00",
+            "0.00"
+          ]
+        ],
+        "SATURDAY": [
+          [
+            "07:00",
+            "20:00",
+            "0.00"
+          ]
+        ]
+      },
+      "position": "LTA gantry map"
+    },
+    {
+      "code": "G12",
+      "name": "Oxley Road (Orchard cordon), gantry 12",
+      "zoneId": "G12",
+      "lat": 1.299254,
+      "lng": 103.841383,
+      "headingDeg": 18,
+      "roads": [
+        "OXLEY ROAD"
+      ],
+      "rates": {
+        "WEEKDAY": [
+          [
+            "11:00",
+            "11:05",
+            "0.50"
+          ],
+          [
+            "11:05",
+            "18:55",
+            "1.00"
+          ],
+          [
+            "18:55",
+            "19:00",
+            "0.50"
+          ]
+        ],
+        "SATURDAY": [
+          [
+            "07:00",
+            "20:00",
+            "0.00"
+          ]
+        ]
+      },
+      "position": "LTA gantry map"
+    },
+    {
+      "code": "G13",
+      "name": "Orchard Road (Orchard cordon), gantry 13",
+      "zoneId": "G13",
+      "lat": 1.304795,
+      "lng": 103.83224,
+      "headingDeg": 120,
+      "roads": [
+        "ORCHARD ROAD"
+      ],
+      "rates": {
+        "WEEKDAY": [
+          [
+            "11:00",
+            "11:05",
+            "0.50"
+          ],
+          [
+            "11:05",
+            "18:55",
+            "1.00"
+          ],
+          [
+            "18:55",
+            "19:00",
+            "0.50"
+          ]
+        ],
+        "SATURDAY": [
+          [
+            "07:00",
+            "20:00",
+            "0.00"
+          ]
+        ]
+      },
+      "position": "LTA gantry map"
+    },
+    {
+      "code": "G14",
+      "name": "Orchard Turn (Orchard cordon), gantry 14",
+      "zoneId": "G14",
+      "lat": 1.303526,
+      "lng": 103.83264,
+      "headingDeg": 43,
+      "roads": [
+        "ORCHARD TURN"
+      ],
+      "rates": {
+        "WEEKDAY": [
+          [
+            "11:00",
+            "11:05",
+            "0.50"
+          ],
+          [
+            "11:05",
+            "18:55",
+            "1.00"
+          ],
+          [
+            "18:55",
+            "19:00",
+            "0.50"
+          ]
+        ],
+        "SATURDAY": [
+          [
+            "07:00",
+            "20:00",
+            "0.00"
+          ]
+        ]
+      },
+      "position": "LTA gantry map"
+    },
+    {
+      "code": "G15",
+      "name": "Killiney Road (Orchard cordon), gantry 15",
+      "zoneId": "G15",
+      "lat": 1.299514,
+      "lng": 103.839831,
+      "headingDeg": 220,
+      "roads": [
+        "KILLINEY ROAD"
+      ],
+      "rates": {
+        "WEEKDAY": [
+          [
+            "11:00",
+            "11:05",
+            "0.50"
+          ],
+          [
+            "11:05",
+            "18:55",
+            "1.00"
+          ],
+          [
+            "18:55",
+            "19:00",
+            "0.50"
+          ]
+        ],
+        "SATURDAY": [
+          [
+            "07:00",
+            "20:00",
+            "0.00"
+          ]
+        ]
+      },
+      "position": "LTA gantry map"
+    },
+    {
+      "code": "G16",
+      "name": "Beach Road (CBD cordon), gantry 16",
+      "zoneId": "G16",
+      "lat": 1.297949,
+      "lng": 103.857692,
+      "headingDeg": 228,
+      "roads": [
+        "BEACH ROAD"
+      ],
+      "rates": {
+        "WEEKDAY": [
+          [
+            "07:00",
+            "20:00",
+            "0.00"
+          ]
+        ],
+        "SATURDAY": [
+          [
+            "07:00",
+            "20:00",
+            "0.00"
+          ]
+        ]
+      },
+      "position": "LTA gantry map"
+    },
+    {
+      "code": "G17",
+      "name": "Temasek Boulevard (CBD cordon), gantry 17",
+      "zoneId": "G17",
+      "lat": 1.295998,
+      "lng": 103.859687,
+      "headingDeg": 215,
+      "roads": [
+        "TEMASEK BOULEVARD"
+      ],
+      "rates": {
+        "WEEKDAY": [
+          [
+            "07:00",
+            "20:00",
+            "0.00"
+          ]
+        ],
+        "SATURDAY": [
+          [
+            "07:00",
+            "20:00",
+            "0.00"
+          ]
+        ]
+      },
+      "position": "LTA gantry map"
+    },
+    {
+      "code": "G18",
+      "name": "Republic Boulevard (CBD cordon), gantry 18",
+      "zoneId": "G18",
+      "lat": 1.296217,
+      "lng": 103.862406,
+      "headingDeg": 165,
+      "roads": [
+        "REPUBLIC BOULEVARD"
+      ],
+      "rates": {
+        "WEEKDAY": [
+          [
+            "07:00",
+            "20:00",
+            "0.00"
+          ]
+        ],
+        "SATURDAY": [
+          [
+            "07:00",
+            "20:00",
+            "0.00"
+          ]
+        ]
+      },
+      "position": "LTA gantry map"
+    },
+    {
+      "code": "G19",
+      "name": "Havelock Road/Clemenceau Ave (CBD cordon), gantry 19",
+      "zoneId": "G19",
+      "lat": 1.288441,
+      "lng": 103.841591,
+      "headingDeg": 123,
+      "roads": [
+        "HAVELOCK ROAD"
+      ],
+      "rates": {
+        "WEEKDAY": [
+          [
+            "07:00",
+            "20:00",
+            "0.00"
+          ]
+        ],
+        "SATURDAY": [
+          [
+            "07:00",
+            "20:00",
+            "0.00"
+          ]
+        ]
+      },
+      "position": "LTA gantry map"
+    },
+    {
+      "code": "G20",
+      "name": "Havelock Road/CTE Exit (CBD cordon), gantry 20",
+      "zoneId": "G20",
+      "lat": 1.287802,
+      "lng": 103.842721,
+      "headingDeg": 98,
+      "roads": [
+        "CENTRAL EXPRESSWAY",
+        "CTE"
+      ],
+      "rates": {
+        "WEEKDAY": [
+          [
+            "07:00",
+            "20:00",
+            "0.00"
+          ]
+        ],
+        "SATURDAY": [
+          [
+            "07:00",
+            "20:00",
+            "0.00"
+          ]
+        ]
+      },
+      "position": "LTA gantry map"
+    },
+    {
+      "code": "G21",
+      "name": "Buyong Road (Orchard cordon), gantry 21",
+      "zoneId": "G21",
+      "lat": 1.300568,
+      "lng": 103.843194,
+      "headingDeg": 17,
+      "roads": [
+        "BUYONG ROAD"
+      ],
+      "rates": {
+        "WEEKDAY": [
+          [
+            "11:00",
+            "11:05",
+            "0.50"
+          ],
+          [
+            "11:05",
+            "18:55",
+            "1.00"
+          ],
+          [
+            "18:55",
+            "19:00",
+            "0.50"
+          ]
+        ],
+        "SATURDAY": [
+          [
+            "07:00",
+            "20:00",
+            "0.00"
+          ]
+        ]
+      },
+      "position": "LTA gantry map"
+    },
+    {
+      "code": "G22",
+      "name": "Kramat Road (Orchard cordon), gantry 22",
+      "zoneId": "G22",
+      "lat": 1.301622,
+      "lng": 103.841987,
+      "headingDeg": 288,
+      "roads": [
+        "KRAMAT ROAD"
+      ],
+      "rates": {
+        "WEEKDAY": [
+          [
+            "11:00",
+            "11:05",
+            "0.50"
+          ],
+          [
+            "11:05",
+            "18:55",
+            "1.00"
+          ],
+          [
+            "18:55",
+            "19:00",
+            "0.50"
+          ]
+        ],
+        "SATURDAY": [
+          [
+            "07:00",
+            "20:00",
+            "0.00"
+          ]
+        ]
+      },
+      "position": "LTA gantry map"
+    },
+    {
+      "code": "G23",
+      "name": "River Valley Road (CBD cordon), gantry 23",
+      "zoneId": "G23",
+      "lat": 1.292956,
+      "lng": 103.843971,
+      "headingDeg": 126,
+      "roads": [
+        "RIVER VALLEY ROAD"
+      ],
+      "rates": {
+        "WEEKDAY": [
+          [
+            "07:00",
+            "20:00",
+            "0.00"
+          ]
+        ],
+        "SATURDAY": [
+          [
+            "07:00",
+            "20:00",
+            "0.00"
+          ]
+        ]
+      },
+      "position": "LTA gantry map, unlabelled feature matched by location"
+    },
+    {
+      "code": "G24",
+      "name": "Merchant Road/Clemenceau Ave (CBD cordon), gantry 24",
+      "zoneId": "G24",
+      "lat": 1.290048,
+      "lng": 103.842397,
+      "headingDeg": 122,
+      "roads": [
+        "MERCHANT ROAD"
+      ],
+      "rates": {
+        "WEEKDAY": [
+          [
+            "07:00",
+            "20:00",
+            "0.00"
+          ]
+        ],
+        "SATURDAY": [
+          [
+            "07:00",
+            "20:00",
+            "0.00"
+          ]
+        ]
+      },
+      "position": "LTA gantry map"
+    },
+    {
+      "code": "G25",
+      "name": "Merchant Road/CTE Exit (CBD cordon), gantry 25",
+      "zoneId": "G25",
+      "lat": 1.288699,
+      "lng": 103.844417,
+      "headingDeg": 128,
+      "roads": [
+        "CENTRAL EXPRESSWAY",
+        "CTE"
+      ],
+      "rates": {
+        "WEEKDAY": [
+          [
+            "07:00",
+            "20:00",
+            "0.00"
+          ]
+        ],
+        "SATURDAY": [
+          [
+            "07:00",
+            "20:00",
+            "0.00"
+          ]
+        ]
+      },
+      "position": "LTA gantry map"
+    },
+    {
+      "code": "G26",
+      "name": "Clemenceau Ave (Orchard cordon), gantry 26",
+      "zoneId": "G26",
+      "lat": 1.297703,
+      "lng": 103.843711,
+      "headingDeg": 357,
+      "roads": [
+        "CLEMENCEAU AVENUE"
+      ],
+      "rates": {
+        "WEEKDAY": [
+          [
+            "11:00",
+            "11:05",
+            "0.50"
+          ],
+          [
+            "11:05",
+            "18:55",
+            "1.00"
+          ],
+          [
+            "18:55",
+            "19:00",
+            "0.50"
+          ]
+        ],
+        "SATURDAY": [
+          [
+            "07:00",
+            "20:00",
+            "0.00"
+          ]
+        ]
+      },
+      "position": "LTA gantry map"
+    },
+    {
+      "code": "G27",
+      "name": "Cairnhill Road (Orchard cordon), gantry 27",
+      "zoneId": "G27",
+      "lat": 1.305698,
+      "lng": 103.837647,
+      "headingDeg": 242,
+      "roads": [
+        "CAIRNHILL ROAD"
+      ],
+      "rates": {
+        "WEEKDAY": [
+          [
+            "11:00",
+            "11:05",
+            "0.50"
+          ],
+          [
+            "11:05",
+            "18:55",
+            "1.00"
+          ],
+          [
+            "18:55",
+            "19:00",
+            "0.50"
+          ]
+        ],
+        "SATURDAY": [
+          [
+            "07:00",
+            "20:00",
+            "0.00"
+          ]
+        ]
+      },
+      "position": "LTA gantry map"
+    },
+    {
+      "code": "G28",
+      "name": "Central Boulevard (CBD cordon), gantry 28",
+      "zoneId": "G28",
+      "lat": 1.27442,
+      "lng": 103.860562,
+      "headingDeg": 303,
+      "roads": [
+        "CENTRAL BOULEVARD"
+      ],
+      "rates": {
+        "WEEKDAY": [
+          [
+            "07:00",
+            "20:00",
+            "0.00"
+          ]
+        ],
+        "SATURDAY": [
+          [
+            "07:00",
+            "20:00",
+            "0.00"
+          ]
+        ]
+      },
+      "position": "LTA gantry map"
+    },
+    {
+      "code": "G29",
+      "name": "Slip Road from Westbound MCE towards Maxwell Road (CBD cordon), gantry 29",
+      "zoneId": "G29",
+      "lat": 1.274645,
+      "lng": 103.850071,
+      "headingDeg": 318,
+      "roads": [
+        "MARINA COASTAL EXPRESSWAY",
+        "MCE"
+      ],
+      "rates": {
+        "WEEKDAY": [
+          [
+            "07:00",
+            "20:00",
+            "0.00"
+          ]
+        ],
+        "SATURDAY": [
+          [
+            "07:00",
+            "20:00",
+            "0.00"
+          ]
+        ]
+      },
+      "position": "LTA gantry map"
+    },
+    {
+      "code": "G30",
+      "name": "ECP (City), gantry 30",
+      "zoneId": "G30",
+      "lat": 1.295451,
+      "lng": 103.872156,
+      "headingDeg": 269,
+      "roads": [
+        "EAST COAST PARKWAY",
+        "ECP"
+      ],
+      "rates": {
+        "WEEKDAY": [
+          [
+            "07:00",
+            "20:00",
+            "0.00"
+          ]
+        ],
+        "SATURDAY": [
+          [
+            "07:00",
+            "20:00",
+            "0.00"
+          ]
+        ]
+      },
+      "position": "LTA gantry map, unlabelled feature UNK matched by location"
+    },
+    {
+      "code": "G31",
+      "name": "CTE southbound after Braddell Road, gantry 31",
+      "zoneId": "G31+G33+G34",
+      "lat": 1.333372,
+      "lng": 103.862419,
+      "headingDeg": 178,
+      "roads": [
+        "CENTRAL EXPRESSWAY",
+        "CTE"
+      ],
+      "rates": {
+        "WEEKDAY": [
+          [
+            "07:30",
+            "07:35",
+            "1.00"
+          ],
+          [
+            "07:35",
+            "08:00",
+            "2.00"
+          ],
+          [
+            "08:00",
+            "08:05",
+            "3.00"
+          ],
+          [
+            "08:05",
+            "08:30",
+            "4.00"
+          ],
+          [
+            "08:30",
+            "08:35",
+            "4.50"
+          ],
+          [
+            "08:35",
+            "08:55",
+            "5.00"
+          ],
+          [
+            "08:55",
+            "09:00",
+            "4.50"
+          ],
+          [
+            "09:00",
+            "09:25",
+            "4.00"
+          ],
+          [
+            "09:25",
+            "09:30",
+            "3.50"
+          ],
+          [
+            "09:30",
+            "09:55",
+            "3.00"
+          ],
+          [
+            "09:55",
+            "10:00",
+            "1.50"
+          ]
+        ],
+        "SATURDAY": [
+          [
+            "07:00",
+            "20:00",
+            "0.00"
+          ]
+        ]
+      },
+      "position": "LTA gantry map, unlabelled feature matched by location"
+    },
+    {
+      "code": "G32",
+      "name": "PIE westbound after the Kallang Bahru exit, gantry 32",
+      "zoneId": "G32+G45",
+      "lat": 1.326321,
+      "lng": 103.870506,
+      "headingDeg": 314,
+      "roads": [
+        "PAN ISLAND EXPRESSWAY",
+        "PIE"
+      ],
+      "rates": {
+        "WEEKDAY": [
+          [
+            "07:00",
+            "07:05",
+            "0.50"
+          ],
+          [
+            "07:05",
+            "07:30",
+            "1.00"
+          ],
+          [
+            "07:30",
+            "07:35",
+            "1.50"
+          ],
+          [
+            "07:35",
+            "08:30",
+            "2.00"
+          ],
+          [
+            "08:30",
+            "08:35",
+            "3.00"
+          ],
+          [
+            "08:35",
+            "08:55",
+            "4.00"
+          ],
+          [
+            "08:55",
+            "09:00",
+            "3.00"
+          ],
+          [
+            "09:00",
+            "09:25",
+            "2.00"
+          ],
+          [
+            "09:25",
+            "09:30",
+            "1.50"
+          ],
+          [
+            "09:30",
+            "09:55",
+            "1.00"
+          ],
+          [
+            "09:55",
+            "10:00",
+            "0.50"
+          ]
+        ],
+        "SATURDAY": [
+          [
+            "07:00",
+            "20:00",
+            "0.00"
+          ]
+        ]
+      },
+      "position": "LTA gantry map"
+    },
+    {
+      "code": "G33",
+      "name": "CTE southbound after Braddell Road, gantry 33",
+      "zoneId": "G31+G33+G34",
+      "lat": 1.329084,
+      "lng": 103.864612,
+      "headingDeg": 267,
+      "roads": [
+        "CENTRAL EXPRESSWAY",
+        "CTE"
+      ],
+      "rates": {
+        "WEEKDAY": [
+          [
+            "07:30",
+            "07:35",
+            "1.00"
+          ],
+          [
+            "07:35",
+            "08:00",
+            "2.00"
+          ],
+          [
+            "08:00",
+            "08:05",
+            "3.00"
+          ],
+          [
+            "08:05",
+            "08:30",
+            "4.00"
+          ],
+          [
+            "08:30",
+            "08:35",
+            "4.50"
+          ],
+          [
+            "08:35",
+            "08:55",
+            "5.00"
+          ],
+          [
+            "08:55",
+            "09:00",
+            "4.50"
+          ],
+          [
+            "09:00",
+            "09:25",
+            "4.00"
+          ],
+          [
+            "09:25",
+            "09:30",
+            "3.50"
+          ],
+          [
+            "09:30",
+            "09:55",
+            "3.00"
+          ],
+          [
+            "09:55",
+            "10:00",
+            "1.50"
+          ]
+        ],
+        "SATURDAY": [
+          [
+            "07:00",
+            "20:00",
+            "0.00"
+          ]
+        ]
+      },
+      "position": "LTA gantry map"
+    },
+    {
+      "code": "G34",
+      "name": "CTE southbound after Braddell Road, gantry 34",
+      "zoneId": "G31+G33+G34",
+      "lat": 1.318356,
+      "lng": 103.851642,
+      "headingDeg": 254,
+      "roads": [
+        "CENTRAL EXPRESSWAY",
+        "CTE"
+      ],
+      "rates": {
+        "WEEKDAY": [
+          [
+            "07:30",
+            "07:35",
+            "1.00"
+          ],
+          [
+            "07:35",
+            "08:00",
+            "2.00"
+          ],
+          [
+            "08:00",
+            "08:05",
+            "3.00"
+          ],
+          [
+            "08:05",
+            "08:30",
+            "4.00"
+          ],
+          [
+            "08:30",
+            "08:35",
+            "4.50"
+          ],
+          [
+            "08:35",
+            "08:55",
+            "5.00"
+          ],
+          [
+            "08:55",
+            "09:00",
+            "4.50"
+          ],
+          [
+            "09:00",
+            "09:25",
+            "4.00"
+          ],
+          [
+            "09:25",
+            "09:30",
+            "3.50"
+          ],
+          [
+            "09:30",
+            "09:55",
+            "3.00"
+          ],
+          [
+            "09:55",
+            "10:00",
+            "1.50"
+          ]
+        ],
+        "SATURDAY": [
+          [
+            "07:00",
+            "20:00",
+            "0.00"
+          ]
+        ]
+      },
+      "position": "LTA gantry map"
+    },
+    {
+      "code": "G35",
+      "name": "CTE between Ang Mo Kio Ave 1 and Braddell Road, gantry 35",
+      "zoneId": "G35",
+      "lat": 1.346592,
+      "lng": 103.859387,
+      "headingDeg": 160,
+      "roads": [
+        "CENTRAL EXPRESSWAY",
+        "CTE"
+      ],
+      "rates": {
+        "WEEKDAY": [
+          [
+            "07:00",
+            "07:05",
+            "1.00"
+          ],
+          [
+            "07:05",
+            "08:00",
+            "2.00"
+          ],
+          [
+            "08:00",
+            "08:05",
+            "2.50"
+          ],
+          [
+            "08:05",
+            "09:25",
+            "3.00"
+          ],
+          [
+            "09:25",
+            "09:30",
+            "2.00"
+          ],
+          [
+            "09:30",
+            "09:55",
+            "1.00"
+          ],
+          [
+            "09:55",
+            "10:00",
+            "0.50"
+          ]
+        ],
+        "SATURDAY": [
+          [
+            "07:00",
+            "20:00",
+            "0.00"
+          ]
+        ]
+      },
+      "position": "LTA gantry map, unlabelled feature matched by location"
+    },
+    {
+      "code": "G36",
+      "name": "AYE between Portsdown Road and Alexandra Road, gantry 36",
+      "zoneId": "G36",
+      "lat": 1.286743,
+      "lng": 103.796802,
+      "headingDeg": 119,
+      "roads": [
+        "AYER RAJAH EXPRESSWAY",
+        "AYE"
+      ],
+      "rates": {
+        "WEEKDAY": [
+          [
+            "08:00",
+            "08:05",
+            "0.50"
+          ],
+          [
+            "08:05",
+            "08:30",
+            "1.00"
+          ],
+          [
+            "08:30",
+            "08:35",
+            "1.50"
+          ],
+          [
+            "08:35",
+            "08:55",
+            "2.00"
+          ],
+          [
+            "08:55",
+            "09:00",
+            "1.50"
+          ],
+          [
+            "09:00",
+            "09:25",
+            "1.00"
+          ],
+          [
+            "09:25",
+            "09:30",
+            "0.50"
+          ]
+        ],
+        "SATURDAY": [
+          [
+            "07:00",
+            "20:00",
+            "0.00"
+          ]
+        ]
+      },
+      "position": "LTA gantry map"
+    },
+    {
+      "code": "G37",
+      "name": "PIE eastbound after Adam Road, gantry 37",
+      "zoneId": "G37+G38",
+      "lat": 1.330684,
+      "lng": 103.819901,
+      "headingDeg": 109,
+      "roads": [
+        "PAN ISLAND EXPRESSWAY",
+        "PIE"
+      ],
+      "rates": {
+        "WEEKDAY": [
+          [
+            "07:30",
+            "07:35",
+            "1.00"
+          ],
+          [
+            "07:35",
+            "08:25",
+            "2.00"
+          ],
+          [
+            "08:25",
+            "08:30",
+            "1.50"
+          ],
+          [
+            "08:30",
+            "09:25",
+            "1.00"
+          ],
+          [
+            "09:25",
+            "09:30",
+            "0.50"
+          ]
+        ],
+        "SATURDAY": [
+          [
+            "07:00",
+            "20:00",
+            "0.00"
+          ]
+        ]
+      },
+      "position": "LTA gantry map"
+    },
+    {
+      "code": "G38",
+      "name": "PIE eastbound after Adam Road, gantry 38",
+      "zoneId": "G37+G38",
+      "lat": 1.327605,
+      "lng": 103.828317,
+      "headingDeg": 109,
+      "roads": [
+        "PAN ISLAND EXPRESSWAY",
+        "PIE"
+      ],
+      "rates": {
+        "WEEKDAY": [
+          [
+            "07:30",
+            "07:35",
+            "1.00"
+          ],
+          [
+            "07:35",
+            "08:25",
+            "2.00"
+          ],
+          [
+            "08:25",
+            "08:30",
+            "1.50"
+          ],
+          [
+            "08:30",
+            "09:25",
+            "1.00"
+          ],
+          [
+            "09:25",
+            "09:30",
+            "0.50"
+          ]
+        ],
+        "SATURDAY": [
+          [
+            "07:00",
+            "20:00",
+            "0.00"
+          ]
+        ]
+      },
+      "position": "LTA gantry map"
+    },
+    {
+      "code": "G39",
+      "name": "Thomson Road southbound after Toa Payoh Rise, gantry 39",
+      "zoneId": "G39",
+      "lat": 1.336294,
+      "lng": 103.837206,
+      "headingDeg": 192,
+      "roads": [
+        "THOMSON ROAD"
+      ],
+      "rates": {
+        "WEEKDAY": [
+          [
+            "07:00",
+            "20:00",
+            "0.00"
+          ]
+        ],
+        "SATURDAY": [
+          [
+            "07:00",
+            "20:00",
+            "0.00"
+          ]
+        ]
+      },
+      "position": "LTA gantry map"
+    },
+    {
+      "code": "G40",
+      "name": "Bendemeer Road southbound after Woodsville Interchange, gantry 40",
+      "zoneId": "G40+G71",
+      "lat": 1.327247,
+      "lng": 103.868467,
+      "headingDeg": 208,
+      "roads": [
+        "BENDEMEER ROAD"
+      ],
+      "rates": {
+        "WEEKDAY": [
+          [
+            "07:00",
+            "20:00",
+            "0.00"
+          ]
+        ],
+        "SATURDAY": [
+          [
+            "07:00",
+            "20:00",
+            "0.00"
+          ]
+        ]
+      },
+      "position": "LTA gantry map"
+    },
+    {
+      "code": "G41",
+      "name": "AYE westbound after North Buona Vista Road, gantry 41",
+      "zoneId": "G41",
+      "lat": 1.301111,
+      "lng": 103.776653,
+      "headingDeg": 304,
+      "roads": [
+        "AYER RAJAH EXPRESSWAY",
+        "AYE"
+      ],
+      "rates": {
+        "WEEKDAY": [
+          [
+            "17:00",
+            "17:05",
+            "0.50"
+          ],
+          [
+            "17:05",
+            "17:30",
+            "1.00"
+          ],
+          [
+            "17:30",
+            "17:35",
+            "2.00"
+          ],
+          [
+            "17:35",
+            "17:55",
+            "3.00"
+          ],
+          [
+            "17:55",
+            "18:00",
+            "2.50"
+          ],
+          [
+            "18:00",
+            "18:30",
+            "2.00"
+          ],
+          [
+            "18:30",
+            "18:35",
+            "2.50"
+          ],
+          [
+            "18:35",
+            "18:55",
+            "3.00"
+          ],
+          [
+            "18:55",
+            "19:00",
+            "2.00"
+          ],
+          [
+            "19:00",
+            "19:25",
+            "1.00"
+          ],
+          [
+            "19:25",
+            "19:30",
+            "0.50"
+          ]
+        ],
+        "SATURDAY": [
+          [
+            "07:00",
+            "20:00",
+            "0.00"
+          ]
+        ]
+      },
+      "position": "LTA gantry map, unlabelled feature OS041 matched by location"
+    },
+    {
+      "code": "G42",
+      "name": "PIE slip road into CTE, gantry 42",
+      "zoneId": "G42",
+      "lat": 1.329006,
+      "lng": 103.864616,
+      "headingDeg": 268,
+      "roads": [
+        "CENTRAL EXPRESSWAY",
+        "CTE",
+        "PAN ISLAND EXPRESSWAY",
+        "PIE"
+      ],
+      "rates": {
+        "WEEKDAY": [
+          [
+            "07:30",
+            "07:35",
+            "1.00"
+          ],
+          [
+            "07:35",
+            "08:00",
+            "2.00"
+          ],
+          [
+            "08:00",
+            "08:05",
+            "3.00"
+          ],
+          [
+            "08:05",
+            "08:30",
+            "4.00"
+          ],
+          [
+            "08:30",
+            "08:35",
+            "4.50"
+          ],
+          [
+            "08:35",
+            "08:55",
+            "5.00"
+          ],
+          [
+            "08:55",
+            "09:00",
+            "4.50"
+          ],
+          [
+            "09:00",
+            "09:25",
+            "4.00"
+          ],
+          [
+            "09:25",
+            "09:30",
+            "3.50"
+          ],
+          [
+            "09:30",
+            "09:55",
+            "3.00"
+          ],
+          [
+            "09:55",
+            "10:00",
+            "1.50"
+          ]
+        ],
+        "SATURDAY": [
+          [
+            "07:00",
+            "20:00",
+            "0.00"
+          ]
+        ]
+      },
+      "position": "LTA gantry map"
+    },
+    {
+      "code": "G43",
+      "name": "Dunearn Road eastbound after Dunkirk Avenue, gantry 43",
+      "zoneId": "G43+G44",
+      "lat": 1.321577,
+      "lng": 103.823636,
+      "headingDeg": 109,
+      "roads": [
+        "DUNEARN ROAD"
+      ],
+      "rates": {
+        "WEEKDAY": [
+          [
+            "07:00",
+            "20:00",
+            "0.00"
+          ]
+        ],
+        "SATURDAY": [
+          [
+            "07:00",
+            "20:00",
+            "0.00"
+          ]
+        ]
+      },
+      "position": "LTA gantry map"
+    },
+    {
+      "code": "G44",
+      "name": "Dunearn Road eastbound after Dunkirk Avenue, gantry 44",
+      "zoneId": "G43+G44",
+      "lat": 1.321135,
+      "lng": 103.825303,
+      "headingDeg": 105,
+      "roads": [
+        "DUNEARN ROAD"
+      ],
+      "rates": {
+        "WEEKDAY": [
+          [
+            "07:00",
+            "20:00",
+            "0.00"
+          ]
+        ],
+        "SATURDAY": [
+          [
+            "07:00",
+            "20:00",
+            "0.00"
+          ]
+        ]
+      },
+      "position": "LTA gantry map"
+    },
+    {
+      "code": "G45",
+      "name": "PIE westbound after the Kallang Bahru exit, gantry 45",
+      "zoneId": "G32+G45",
+      "lat": 1.326222,
+      "lng": 103.870406,
+      "headingDeg": 316,
+      "roads": [
+        "PAN ISLAND EXPRESSWAY",
+        "PIE"
+      ],
+      "rates": {
+        "WEEKDAY": [
+          [
+            "07:00",
+            "07:05",
+            "0.50"
+          ],
+          [
+            "07:05",
+            "07:30",
+            "1.00"
+          ],
+          [
+            "07:30",
+            "07:35",
+            "1.50"
+          ],
+          [
+            "07:35",
+            "08:30",
+            "2.00"
+          ],
+          [
+            "08:30",
+            "08:35",
+            "3.00"
+          ],
+          [
+            "08:35",
+            "08:55",
+            "4.00"
+          ],
+          [
+            "08:55",
+            "09:00",
+            "3.00"
+          ],
+          [
+            "09:00",
+            "09:25",
+            "2.00"
+          ],
+          [
+            "09:25",
+            "09:30",
+            "1.50"
+          ],
+          [
+            "09:30",
+            "09:55",
+            "1.00"
+          ],
+          [
+            "09:55",
+            "10:00",
+            "0.50"
+          ]
+        ],
+        "SATURDAY": [
+          [
+            "07:00",
+            "20:00",
+            "0.00"
+          ]
+        ]
+      },
+      "position": "LTA gantry map"
+    },
+    {
+      "code": "G46",
+      "name": "CTE northbound between PIE and Braddell Road, gantry 46",
+      "zoneId": "G46+G67",
+      "lat": 1.332743,
+      "lng": 103.86218,
+      "headingDeg": 356,
+      "roads": [
+        "CENTRAL EXPRESSWAY",
+        "CTE",
+        "PAN ISLAND EXPRESSWAY",
+        "PIE"
+      ],
+      "rates": {
+        "WEEKDAY": [
+          [
+            "17:30",
+            "17:35",
+            "2.00"
+          ],
+          [
+            "17:35",
+            "18:55",
+            "4.00"
+          ],
+          [
+            "18:55",
+            "19:00",
+            "3.50"
+          ],
+          [
+            "19:00",
+            "19:25",
+            "3.00"
+          ],
+          [
+            "19:25",
+            "19:30",
+            "2.00"
+          ],
+          [
+            "19:30",
+            "19:55",
+            "1.00"
+          ],
+          [
+            "19:55",
+            "20:00",
+            "0.50"
+          ]
+        ],
+        "SATURDAY": [
+          [
+            "07:00",
+            "20:00",
+            "0.00"
+          ]
+        ]
+      },
+      "position": "LTA gantry map, unlabelled feature matched by location"
+    },
+    {
+      "code": "G47",
+      "name": "YMCA or Fort Canning Tunnel (Orchard cordon), gantry 47",
+      "zoneId": "G47+G49",
+      "lat": 1.298025,
+      "lng": 103.847993,
+      "headingDeg": 129,
+      "roads": [],
+      "rates": {
+        "WEEKDAY": [
+          [
+            "11:00",
+            "11:05",
+            "0.50"
+          ],
+          [
+            "11:05",
+            "18:55",
+            "1.00"
+          ],
+          [
+            "18:55",
+            "19:00",
+            "0.50"
+          ]
+        ],
+        "SATURDAY": [
+          [
+            "07:00",
+            "20:00",
+            "0.00"
+          ]
+        ]
+      },
+      "position": "LTA gantry map"
+    },
+    {
+      "code": "G48",
+      "name": "Handy Road Gantry (CBD cordon), gantry 48",
+      "zoneId": "G48",
+      "lat": 1.298737,
+      "lng": 103.848065,
+      "headingDeg": 87,
+      "roads": [
+        "HANDY ROAD"
+      ],
+      "rates": {
+        "WEEKDAY": [
+          [
+            "07:00",
+            "20:00",
+            "0.00"
+          ]
+        ],
+        "SATURDAY": [
+          [
+            "07:00",
+            "20:00",
+            "0.00"
+          ]
+        ]
+      },
+      "position": "LTA gantry map"
+    },
+    {
+      "code": "G49",
+      "name": "YMCA or Fort Canning Tunnel (Orchard cordon), gantry 49",
+      "zoneId": "G47+G49",
+      "lat": 1.297733,
+      "lng": 103.846393,
+      "headingDeg": 128,
+      "roads": [],
+      "rates": {
+        "WEEKDAY": [
+          [
+            "11:00",
+            "11:05",
+            "0.50"
+          ],
+          [
+            "11:05",
+            "18:55",
+            "1.00"
+          ],
+          [
+            "18:55",
+            "19:00",
+            "0.50"
+          ]
+        ],
+        "SATURDAY": [
+          [
+            "07:00",
+            "20:00",
+            "0.00"
+          ]
+        ]
+      },
+      "position": "LTA gantry map"
+    },
+    {
+      "code": "G50",
+      "name": "KPE southbound after Defu Flyover, gantry 50",
+      "zoneId": "G50",
+      "lat": 1.3535,
+      "lng": 103.8915,
+      "headingDeg": 200,
+      "roads": [
+        "KALLANG PAYA LEBAR EXPRESSWAY",
+        "KPE"
+      ],
+      "rates": {
+        "WEEKDAY": [
+          [
+            "07:00",
+            "07:05",
+            "0.50"
+          ],
+          [
+            "07:05",
+            "07:30",
+            "1.00"
+          ],
+          [
+            "07:30",
+            "07:35",
+            "2.50"
+          ],
+          [
+            "07:35",
+            "08:00",
+            "4.00"
+          ],
+          [
+            "08:00",
+            "08:05",
+            "4.50"
+          ],
+          [
+            "08:05",
+            "08:30",
+            "5.00"
+          ],
+          [
+            "08:30",
+            "08:35",
+            "5.50"
+          ],
+          [
+            "08:35",
+            "08:55",
+            "6.00"
+          ],
+          [
+            "08:55",
+            "09:00",
+            "4.00"
+          ],
+          [
+            "09:00",
+            "09:25",
+            "2.00"
+          ],
+          [
+            "09:25",
+            "09:30",
+            "1.50"
+          ],
+          [
+            "09:30",
+            "09:55",
+            "1.00"
+          ],
+          [
+            "09:55",
+            "10:00",
+            "0.50"
+          ]
+        ],
+        "SATURDAY": [
+          [
+            "07:00",
+            "20:00",
+            "0.00"
+          ]
+        ]
+      },
+      "position": "approximate: not in the LTA gantry map; matched by road name within 350 m"
+    },
+    {
+      "code": "G51",
+      "name": "CTE northbound between Jalan Bahagia and PIE, gantry 51",
+      "zoneId": "G51",
+      "lat": 1.326089,
+      "lng": 103.860529,
+      "headingDeg": 47,
+      "roads": [
+        "CENTRAL EXPRESSWAY",
+        "CTE",
+        "PAN ISLAND EXPRESSWAY",
+        "PIE"
+      ],
+      "rates": {
+        "WEEKDAY": [
+          [
+            "17:30",
+            "17:35",
+            "0.50"
+          ],
+          [
+            "17:35",
+            "18:55",
+            "1.00"
+          ],
+          [
+            "18:55",
+            "19:00",
+            "0.50"
+          ]
+        ],
+        "SATURDAY": [
+          [
+            "07:00",
+            "20:00",
+            "0.00"
+          ]
+        ]
+      },
+      "position": "LTA gantry map, unlabelled feature matched by location"
+    },
+    {
+      "code": "G52",
+      "name": "AYE citybound near Clementi, gantry 52",
+      "zoneId": "G52+G53+G74",
+      "lat": 1.315163,
+      "lng": 103.760859,
+      "headingDeg": 190,
+      "roads": [
+        "AYER RAJAH EXPRESSWAY",
+        "AYE"
+      ],
+      "rates": {
+        "WEEKDAY": [
+          [
+            "07:00",
+            "07:05",
+            "0.50"
+          ],
+          [
+            "07:05",
+            "07:30",
+            "1.00"
+          ],
+          [
+            "07:30",
+            "07:35",
+            "3.00"
+          ],
+          [
+            "07:35",
+            "07:55",
+            "5.00"
+          ],
+          [
+            "07:55",
+            "08:00",
+            "3.50"
+          ],
+          [
+            "08:00",
+            "08:30",
+            "2.00"
+          ],
+          [
+            "08:30",
+            "08:35",
+            "3.00"
+          ],
+          [
+            "08:35",
+            "08:55",
+            "4.00"
+          ],
+          [
+            "08:55",
+            "09:00",
+            "3.50"
+          ],
+          [
+            "09:00",
+            "09:25",
+            "3.00"
+          ],
+          [
+            "09:25",
+            "09:30",
+            "2.50"
+          ],
+          [
+            "09:30",
+            "09:55",
+            "2.00"
+          ],
+          [
+            "09:55",
+            "10:00",
+            "1.00"
+          ],
+          [
+            "17:30",
+            "17:35",
+            "1.50"
+          ],
+          [
+            "17:35",
+            "17:55",
+            "3.00"
+          ],
+          [
+            "17:55",
+            "18:00",
+            "2.00"
+          ],
+          [
+            "18:00",
+            "18:25",
+            "1.00"
+          ],
+          [
+            "18:25",
+            "18:30",
+            "0.50"
+          ]
+        ],
+        "SATURDAY": [
+          [
+            "07:00",
+            "20:00",
+            "0.00"
+          ]
+        ]
+      },
+      "position": "LTA gantry map, unlabelled feature OS052 matched by location"
+    },
+    {
+      "code": "G53",
+      "name": "AYE citybound near Clementi, gantry 53",
+      "zoneId": "G52+G53+G74",
+      "lat": 1.308825,
+      "lng": 103.766411,
+      "headingDeg": 23,
+      "roads": [
+        "AYER RAJAH EXPRESSWAY",
+        "AYE"
+      ],
+      "rates": {
+        "WEEKDAY": [
+          [
+            "07:00",
+            "07:05",
+            "0.50"
+          ],
+          [
+            "07:05",
+            "07:30",
+            "1.00"
+          ],
+          [
+            "07:30",
+            "07:35",
+            "3.00"
+          ],
+          [
+            "07:35",
+            "07:55",
+            "5.00"
+          ],
+          [
+            "07:55",
+            "08:00",
+            "3.50"
+          ],
+          [
+            "08:00",
+            "08:30",
+            "2.00"
+          ],
+          [
+            "08:30",
+            "08:35",
+            "3.00"
+          ],
+          [
+            "08:35",
+            "08:55",
+            "4.00"
+          ],
+          [
+            "08:55",
+            "09:00",
+            "3.50"
+          ],
+          [
+            "09:00",
+            "09:25",
+            "3.00"
+          ],
+          [
+            "09:25",
+            "09:30",
+            "2.50"
+          ],
+          [
+            "09:30",
+            "09:55",
+            "2.00"
+          ],
+          [
+            "09:55",
+            "10:00",
+            "1.00"
+          ],
+          [
+            "17:30",
+            "17:35",
+            "1.50"
+          ],
+          [
+            "17:35",
+            "17:55",
+            "3.00"
+          ],
+          [
+            "17:55",
+            "18:00",
+            "2.00"
+          ],
+          [
+            "18:00",
+            "18:25",
+            "1.00"
+          ],
+          [
+            "18:25",
+            "18:30",
+            "0.50"
+          ]
+        ],
+        "SATURDAY": [
+          [
+            "07:00",
+            "20:00",
+            "0.00"
+          ]
+        ]
+      },
+      "position": "LTA gantry map, unlabelled feature OS053 matched by location"
+    },
+    {
+      "code": "G56",
+      "name": "Lorong 6 Toa Payoh from Braddell Road, gantry 56",
+      "zoneId": "G56",
+      "lat": 1.340825,
+      "lng": 103.853375,
+      "headingDeg": 198,
+      "roads": [],
+      "rates": {
+        "WEEKDAY": [
+          [
+            "07:00",
+            "20:00",
+            "0.00"
+          ]
+        ],
+        "SATURDAY": [
+          [
+            "07:00",
+            "20:00",
+            "0.00"
+          ]
+        ]
+      },
+      "position": "LTA gantry map"
+    },
+    {
+      "code": "G57",
+      "name": "Kallang Bahru from PIE, gantry 57",
+      "zoneId": "G57",
+      "lat": 1.321941,
+      "lng": 103.872836,
+      "headingDeg": 238,
+      "roads": [
+        "PAN ISLAND EXPRESSWAY",
+        "PIE"
+      ],
+      "rates": {
+        "WEEKDAY": [
+          [
+            "07:00",
+            "20:00",
+            "0.00"
+          ]
+        ],
+        "SATURDAY": [
+          [
+            "07:00",
+            "20:00",
+            "0.00"
+          ]
+        ]
+      },
+      "position": "LTA gantry map"
+    },
+    {
+      "code": "G58",
+      "name": "Geylang Bahru westbound after Geylang Bahru Terrace, gantry 58",
+      "zoneId": "G58",
+      "lat": 1.320148,
+      "lng": 103.871763,
+      "headingDeg": 331,
+      "roads": [],
+      "rates": {
+        "WEEKDAY": [
+          [
+            "07:00",
+            "20:00",
+            "0.00"
+          ]
+        ],
+        "SATURDAY": [
+          [
+            "07:00",
+            "20:00",
+            "0.00"
+          ]
+        ]
+      },
+      "position": "LTA gantry map"
+    },
+    {
+      "code": "G59",
+      "name": "Upper Boon Keng Road near Lorong 1 Geylang, gantry 59",
+      "zoneId": "G59",
+      "lat": 1.313665,
+      "lng": 103.870612,
+      "headingDeg": 254,
+      "roads": [
+        "UPPER BOON KENG ROAD"
+      ],
+      "rates": {
+        "WEEKDAY": [
+          [
+            "07:00",
+            "20:00",
+            "0.00"
+          ]
+        ],
+        "SATURDAY": [
+          [
+            "07:00",
+            "20:00",
+            "0.00"
+          ]
+        ]
+      },
+      "position": "LTA gantry map"
+    },
+    {
+      "code": "G60",
+      "name": "Eu Tong Sen Street, Fullerton Road or Bayfront Avenue northbound (CBD cordon), gantry 60",
+      "zoneId": "G60+G63+G66",
+      "lat": 1.28939,
+      "lng": 103.847598,
+      "headingDeg": 40,
+      "roads": [
+        "EU TONG SEN STREET"
+      ],
+      "rates": {
+        "WEEKDAY": [
+          [
+            "07:00",
+            "20:00",
+            "0.00"
+          ]
+        ],
+        "SATURDAY": [
+          [
+            "07:00",
+            "20:00",
+            "0.00"
+          ]
+        ]
+      },
+      "position": "LTA gantry map"
+    },
+    {
+      "code": "G61",
+      "name": "New Bridge Road, South Bridge Road, Fullerton Road or Bayfront Avenue southbound (CBD cordon), gantry 61",
+      "zoneId": "G61+G62+G64+G69",
+      "lat": 1.28926,
+      "lng": 103.847712,
+      "headingDeg": 221,
+      "roads": [
+        "NEW BRIDGE ROAD"
+      ],
+      "rates": {
+        "WEEKDAY": [
+          [
+            "07:00",
+            "20:00",
+            "0.00"
+          ]
+        ],
+        "SATURDAY": [
+          [
+            "07:00",
+            "20:00",
+            "0.00"
+          ]
+        ]
+      },
+      "position": "LTA gantry map"
+    },
+    {
+      "code": "G62",
+      "name": "New Bridge Road, South Bridge Road, Fullerton Road or Bayfront Avenue southbound (CBD cordon), gantry 62",
+      "zoneId": "G61+G62+G64+G69",
+      "lat": 1.28854,
+      "lng": 103.848962,
+      "headingDeg": 214,
+      "roads": [
+        "NEW BRIDGE ROAD"
+      ],
+      "rates": {
+        "WEEKDAY": [
+          [
+            "07:00",
+            "20:00",
+            "0.00"
+          ]
+        ],
+        "SATURDAY": [
+          [
+            "07:00",
+            "20:00",
+            "0.00"
+          ]
+        ]
+      },
+      "position": "LTA gantry map"
+    },
+    {
+      "code": "G63",
+      "name": "Eu Tong Sen Street, Fullerton Road or Bayfront Avenue northbound (CBD cordon), gantry 63",
+      "zoneId": "G60+G63+G66",
+      "lat": 1.285962,
+      "lng": 103.853587,
+      "headingDeg": 24,
+      "roads": [
+        "EU TONG SEN STREET"
+      ],
+      "rates": {
+        "WEEKDAY": [
+          [
+            "07:00",
+            "20:00",
+            "0.00"
+          ]
+        ],
+        "SATURDAY": [
+          [
+            "07:00",
+            "20:00",
+            "0.00"
+          ]
+        ]
+      },
+      "position": "LTA gantry map"
+    },
+    {
+      "code": "G64",
+      "name": "New Bridge Road, South Bridge Road, Fullerton Road or Bayfront Avenue southbound (CBD cordon), gantry 64",
+      "zoneId": "G61+G62+G64+G69",
+      "lat": 1.285959,
+      "lng": 103.853786,
+      "headingDeg": 204,
+      "roads": [
+        "NEW BRIDGE ROAD"
+      ],
+      "rates": {
+        "WEEKDAY": [
+          [
+            "07:00",
+            "20:00",
+            "0.00"
+          ]
+        ],
+        "SATURDAY": [
+          [
+            "07:00",
+            "20:00",
+            "0.00"
+          ]
+        ]
+      },
+      "position": "LTA gantry map"
+    },
+    {
+      "code": "G65",
+      "name": "PIE westbound before Eunos Link, gantry 65",
+      "zoneId": "G65",
+      "lat": 1.328564,
+      "lng": 103.911632,
+      "headingDeg": 246,
+      "roads": [
+        "PAN ISLAND EXPRESSWAY",
+        "PIE"
+      ],
+      "rates": {
+        "WEEKDAY": [
+          [
+            "07:30",
+            "07:35",
+            "0.50"
+          ],
+          [
+            "07:35",
+            "08:30",
+            "1.00"
+          ],
+          [
+            "08:30",
+            "08:35",
+            "1.50"
+          ],
+          [
+            "08:35",
+            "08:55",
+            "2.00"
+          ],
+          [
+            "08:55",
+            "09:00",
+            "1.50"
+          ],
+          [
+            "09:00",
+            "09:25",
+            "1.00"
+          ],
+          [
+            "09:25",
+            "09:30",
+            "0.50"
+          ]
+        ],
+        "SATURDAY": [
+          [
+            "07:00",
+            "20:00",
+            "0.00"
+          ]
+        ]
+      },
+      "position": "LTA gantry map"
+    },
+    {
+      "code": "G66",
+      "name": "Eu Tong Sen Street, Fullerton Road or Bayfront Avenue northbound (CBD cordon), gantry 66",
+      "zoneId": "G60+G63+G66",
+      "lat": 1.285437,
+      "lng": 103.860738,
+      "headingDeg": 4,
+      "roads": [
+        "EU TONG SEN STREET"
+      ],
+      "rates": {
+        "WEEKDAY": [
+          [
+            "07:00",
+            "20:00",
+            "0.00"
+          ]
+        ],
+        "SATURDAY": [
+          [
+            "07:00",
+            "20:00",
+            "0.00"
+          ]
+        ]
+      },
+      "position": "LTA gantry map"
+    },
+    {
+      "code": "G67",
+      "name": "CTE northbound between PIE and Braddell Road, gantry 67",
+      "zoneId": "G46+G67",
+      "lat": 1.333154,
+      "lng": 103.861854,
+      "headingDeg": 26,
+      "roads": [
+        "CENTRAL EXPRESSWAY",
+        "CTE",
+        "PAN ISLAND EXPRESSWAY",
+        "PIE"
+      ],
+      "rates": {
+        "WEEKDAY": [
+          [
+            "17:30",
+            "17:35",
+            "2.00"
+          ],
+          [
+            "17:35",
+            "18:55",
+            "4.00"
+          ],
+          [
+            "18:55",
+            "19:00",
+            "3.50"
+          ],
+          [
+            "19:00",
+            "19:25",
+            "3.00"
+          ],
+          [
+            "19:25",
+            "19:30",
+            "2.00"
+          ],
+          [
+            "19:30",
+            "19:55",
+            "1.00"
+          ],
+          [
+            "19:55",
+            "20:00",
+            "0.50"
+          ]
+        ],
+        "SATURDAY": [
+          [
+            "07:00",
+            "20:00",
+            "0.00"
+          ]
+        ]
+      },
+      "position": "LTA gantry map, unlabelled feature matched by location"
+    },
+    {
+      "code": "G69",
+      "name": "New Bridge Road, South Bridge Road, Fullerton Road or Bayfront Avenue southbound (CBD cordon), gantry 69",
+      "zoneId": "G61+G62+G64+G69",
+      "lat": 1.28543,
+      "lng": 103.860884,
+      "headingDeg": 183,
+      "roads": [
+        "NEW BRIDGE ROAD"
+      ],
+      "rates": {
+        "WEEKDAY": [
+          [
+            "07:00",
+            "20:00",
+            "0.00"
+          ]
+        ],
+        "SATURDAY": [
+          [
+            "07:00",
+            "20:00",
+            "0.00"
+          ]
+        ]
+      },
+      "position": "LTA gantry map"
+    },
+    {
+      "code": "G70",
+      "name": "Geylang Road westbound before Kallang River, gantry 70",
+      "zoneId": "G70",
+      "lat": 1.310061,
+      "lng": 103.871001,
+      "headingDeg": 272,
+      "roads": [
+        "GEYLANG ROAD"
+      ],
+      "rates": {
+        "WEEKDAY": [
+          [
+            "07:00",
+            "20:00",
+            "0.00"
+          ]
+        ],
+        "SATURDAY": [
+          [
+            "07:00",
+            "20:00",
+            "0.00"
+          ]
+        ]
+      },
+      "position": "LTA gantry map, unlabelled feature matched by location"
+    },
+    {
+      "code": "G72",
+      "name": "Sheares Avenue towards Sheares Link (CBD cordon), gantry 72",
+      "zoneId": "G72",
+      "lat": 1.284339,
+      "lng": 103.861518,
+      "headingDeg": 187,
+      "roads": [
+        "SHEARES AVENUE"
+      ],
+      "rates": {
+        "WEEKDAY": [
+          [
+            "07:00",
+            "20:00",
+            "0.00"
+          ]
+        ],
+        "SATURDAY": [
+          [
+            "07:00",
+            "20:00",
+            "0.00"
+          ]
+        ]
+      },
+      "position": "LTA gantry map, unlabelled feature UNK matched by location"
+    },
+    {
+      "code": "G73",
+      "name": "ECP Eastbound before KPE, gantry 73",
+      "zoneId": "G73",
+      "lat": 1.295357,
+      "lng": 103.876768,
+      "headingDeg": 88,
+      "roads": [
+        "EAST COAST PARKWAY",
+        "ECP",
+        "KALLANG PAYA LEBAR EXPRESSWAY",
+        "KPE"
+      ],
+      "rates": {
+        "WEEKDAY": [
+          [
+            "07:00",
+            "20:00",
+            "0.00"
+          ]
+        ],
+        "SATURDAY": [
+          [
+            "07:00",
+            "20:00",
+            "0.00"
+          ]
+        ]
+      },
+      "position": "LTA gantry map, unlabelled feature UNK matched by location"
+    },
+    {
+      "code": "G74",
+      "name": "AYE citybound near Clementi, gantry 74",
+      "zoneId": "G52+G53+G74",
+      "lat": 1.316373,
+      "lng": 103.758714,
+      "headingDeg": 139,
+      "roads": [
+        "AYER RAJAH EXPRESSWAY",
+        "AYE"
+      ],
+      "rates": {
+        "WEEKDAY": [
+          [
+            "07:00",
+            "07:05",
+            "0.50"
+          ],
+          [
+            "07:05",
+            "07:30",
+            "1.00"
+          ],
+          [
+            "07:30",
+            "07:35",
+            "3.00"
+          ],
+          [
+            "07:35",
+            "07:55",
+            "5.00"
+          ],
+          [
+            "07:55",
+            "08:00",
+            "3.50"
+          ],
+          [
+            "08:00",
+            "08:30",
+            "2.00"
+          ],
+          [
+            "08:30",
+            "08:35",
+            "3.00"
+          ],
+          [
+            "08:35",
+            "08:55",
+            "4.00"
+          ],
+          [
+            "08:55",
+            "09:00",
+            "3.50"
+          ],
+          [
+            "09:00",
+            "09:25",
+            "3.00"
+          ],
+          [
+            "09:25",
+            "09:30",
+            "2.50"
+          ],
+          [
+            "09:30",
+            "09:55",
+            "2.00"
+          ],
+          [
+            "09:55",
+            "10:00",
+            "1.00"
+          ],
+          [
+            "17:30",
+            "17:35",
+            "1.50"
+          ],
+          [
+            "17:35",
+            "17:55",
+            "3.00"
+          ],
+          [
+            "17:55",
+            "18:00",
+            "2.00"
+          ],
+          [
+            "18:00",
+            "18:25",
+            "1.00"
+          ],
+          [
+            "18:25",
+            "18:30",
+            "0.50"
+          ]
+        ],
+        "SATURDAY": [
+          [
+            "07:00",
+            "20:00",
+            "0.00"
+          ]
+        ]
+      },
+      "position": "LTA gantry map, unlabelled feature OS074 matched by location"
+    },
+    {
+      "code": "G80",
+      "name": "KPE slip road into citybound ECP, gantry 80",
+      "zoneId": "G80",
+      "lat": 1.293877,
+      "lng": 103.875382,
+      "headingDeg": 250,
+      "roads": [
+        "EAST COAST PARKWAY",
+        "ECP",
+        "KALLANG PAYA LEBAR EXPRESSWAY",
+        "KPE"
+      ],
+      "rates": {
+        "WEEKDAY": [
+          [
+            "07:00",
+            "20:00",
+            "0.00"
+          ]
+        ],
+        "SATURDAY": [
+          [
+            "07:00",
+            "20:00",
+            "0.00"
+          ]
+        ]
+      },
+      "position": "LTA gantry map"
+    },
+    {
+      "code": "G90",
+      "name": "MCE westbound before the Central Boulevard and Maxwell Road exits, gantry 90",
+      "zoneId": "G90+G91",
+      "lat": 1.274991,
+      "lng": 103.867034,
+      "headingDeg": 235,
+      "roads": [
+        "MARINA COASTAL EXPRESSWAY",
+        "MCE"
+      ],
+      "rates": {
+        "WEEKDAY": [
+          [
+            "07:00",
+            "20:00",
+            "0.00"
+          ]
+        ],
+        "SATURDAY": [
+          [
+            "07:00",
+            "20:00",
+            "0.00"
+          ]
+        ]
+      },
+      "position": "LTA gantry map"
+    },
+    {
+      "code": "G91",
+      "name": "MCE westbound before the Central Boulevard and Maxwell Road exits, gantry 91",
+      "zoneId": "G90+G91",
+      "lat": 1.270654,
+      "lng": 103.856657,
+      "headingDeg": 299,
+      "roads": [
+        "MARINA COASTAL EXPRESSWAY",
+        "MCE"
+      ],
+      "rates": {
+        "WEEKDAY": [
+          [
+            "07:00",
+            "20:00",
+            "0.00"
+          ]
+        ],
+        "SATURDAY": [
+          [
+            "07:00",
+            "20:00",
+            "0.00"
+          ]
+        ]
+      },
+      "position": "LTA gantry map"
+    },
+    {
+      "code": "G92",
+      "name": "MCE eastbound after the Maxwell Road entry, gantry 92",
+      "zoneId": "G92+G93",
+      "lat": 1.274653,
+      "lng": 103.865773,
+      "headingDeg": 50,
+      "roads": [
+        "MARINA COASTAL EXPRESSWAY",
+        "MCE"
+      ],
+      "rates": {
+        "WEEKDAY": [
+          [
+            "18:30",
+            "18:35",
+            "0.50"
+          ],
+          [
+            "18:35",
+            "18:55",
+            "1.00"
+          ],
+          [
+            "18:55",
+            "19:00",
+            "0.50"
+          ]
+        ],
+        "SATURDAY": [
+          [
+            "07:00",
+            "20:00",
+            "0.00"
+          ]
+        ]
+      },
+      "position": "LTA gantry map"
+    },
+    {
+      "code": "G93",
+      "name": "MCE eastbound after the Maxwell Road entry, gantry 93",
+      "zoneId": "G92+G93",
+      "lat": 1.271052,
+      "lng": 103.856496,
+      "headingDeg": 120,
+      "roads": [
+        "MARINA COASTAL EXPRESSWAY",
+        "MCE"
+      ],
+      "rates": {
+        "WEEKDAY": [
+          [
+            "18:30",
+            "18:35",
+            "0.50"
+          ],
+          [
+            "18:35",
+            "18:55",
+            "1.00"
+          ],
+          [
+            "18:55",
+            "19:00",
+            "0.50"
+          ]
+        ],
+        "SATURDAY": [
+          [
+            "07:00",
+            "20:00",
+            "0.00"
+          ]
+        ]
+      },
+      "position": "LTA gantry map"
+    }
+  ]
+}

@@ -1,0 +1,49 @@
+{
+  "name": "tolltally",
+  "version": "0.1.0",
+  "private": true,
+  "description": "TollTally, a Singapore journey-cost planner",
+  "workspaces": [
+    "shared",
+    "backend",
+    "frontend"
+  ],
+  "engines": {
+    "node": "^20.19.0 || ^22.12.0 || >=24.0.0"
+  },
+  "scripts": {
+    "dev": "concurrently -n api,web -c blue,green \"npm run dev -w backend\" \"npm run dev -w frontend\"",
+    "build": "npm run build -w backend && npm run build -w frontend",
+    "start": "npm run start -w backend",
+    "test": "npm run test -w backend",
+    "test:e2e": "npm run test:e2e -w frontend",
+    "test:all": "npm test && npm run test:e2e",
+    "typecheck": "npm run typecheck -w shared && npm run typecheck -w backend && npm run typecheck -w frontend",
+    "lint": "eslint . && npm run typecheck",
+    "format": "prettier --write .",
+    "db:migrate": "npm run db:migrate -w backend",
+    "db:seed": "npm run db:seed -w backend",
+    "db:reset": "npm run db:reset -w backend",
+    "db:import-erp": "npm run db:import-erp -w backend",
+    "erp:check": "npm run erp:check -w backend --",
+    "feeds:check": "npm run feeds:check -w backend",
+    "erp:calibrate": "npm run erp:calibrate -w backend --"
+  },
+  "dependencies": {
+    "prisma": "6.19.3"
+  },
+  "overrides": {
+    "@prisma/config": {
+      "deepmerge-ts": "8.0.0"
+    }
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.39.5",
+    "concurrently": "^9.2.4",
+    "eslint": "^9.39.5",
+    "globals": "^16.0.0",
+    "prettier": "^3.9.6",
+    "typescript": "^5.9.3",
+    "typescript-eslint": "^8.70.0"
+  }
+}

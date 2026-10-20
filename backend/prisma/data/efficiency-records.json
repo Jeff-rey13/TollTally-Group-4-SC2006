@@ -1,0 +1,371 @@
+[
+  {
+    "make": "Toyota",
+    "model": "Corolla Altis 1.6",
+    "consumptionRate": "6.4",
+    "tankCapacity": "50",
+    "fuelType": "PETROL_95",
+    "source": "Toyota Singapore model page (toyota.com.sg); 15.6 km/L. Tank from Toyota Malaysia Corolla brochure (same body). Checked 16 Oct 2026.",
+    "vehicleClass": "PASSENGER_CAR_LGV_TAXI"
+  },
+  {
+    "make": "Toyota",
+    "model": "Corolla Cross Hybrid 2.0",
+    "consumptionRate": "4.8",
+    "tankCapacity": null,
+    "fuelType": "PETROL_95",
+    "source": "Toyota Singapore model page (toyota.com.sg). Checked 16 Oct 2026.",
+    "vehicleClass": "PASSENGER_CAR_LGV_TAXI"
+  },
+  {
+    "make": "Toyota",
+    "model": "Sienta Hybrid 1.5",
+    "consumptionRate": "4.0",
+    "tankCapacity": "40",
+    "fuelType": "PETROL_95",
+    "source": "Toyota Singapore brochure (toyota.com.sg), combined. Checked 16 Oct 2026.",
+    "vehicleClass": "PASSENGER_CAR_LGV_TAXI"
+  },
+  {
+    "make": "Toyota",
+    "model": "Yaris Cross Hybrid 1.5",
+    "consumptionRate": "4.8",
+    "tankCapacity": "36",
+    "fuelType": "PETROL_95",
+    "source": "Toyota Singapore brochure (toyota.com.sg). Checked 16 Oct 2026.",
+    "vehicleClass": "PASSENGER_CAR_LGV_TAXI"
+  },
+  {
+    "make": "Toyota",
+    "model": "Camry Hybrid 2.5",
+    "consumptionRate": "5.1",
+    "tankCapacity": null,
+    "fuelType": "PETROL_95",
+    "source": "Toyota Singapore model page (toyota.com.sg). Checked 16 Oct 2026.",
+    "vehicleClass": "PASSENGER_CAR_LGV_TAXI"
+  },
+  {
+    "make": "Toyota",
+    "model": "Prius Hybrid 1.8",
+    "consumptionRate": "4.1",
+    "tankCapacity": null,
+    "fuelType": "PETROL_95",
+    "source": "Toyota Singapore model page (toyota.com.sg). Checked 16 Oct 2026.",
+    "vehicleClass": "PASSENGER_CAR_LGV_TAXI"
+  },
+  {
+    "make": "Toyota",
+    "model": "Harrier Hybrid 2.5",
+    "consumptionRate": "4.6",
+    "tankCapacity": null,
+    "fuelType": "PETROL_95",
+    "source": "Toyota Singapore model page (toyota.com.sg); 21.7 km/L. Checked 16 Oct 2026.",
+    "vehicleClass": "PASSENGER_CAR_LGV_TAXI"
+  },
+  {
+    "make": "Toyota",
+    "model": "Noah Hybrid",
+    "consumptionRate": "4.4",
+    "tankCapacity": null,
+    "fuelType": "PETROL_95",
+    "source": "Toyota Singapore model page (toyota.com.sg). Checked 16 Oct 2026.",
+    "vehicleClass": "PASSENGER_CAR_LGV_TAXI"
+  },
+  {
+    "make": "Toyota",
+    "model": "Vios Hybrid",
+    "consumptionRate": "3.7",
+    "tankCapacity": null,
+    "fuelType": "PETROL_95",
+    "source": "Toyota Singapore model page (toyota.com.sg); 27 km/L. Checked 16 Oct 2026.",
+    "vehicleClass": "PASSENGER_CAR_LGV_TAXI"
+  },
+  {
+    "make": "Toyota",
+    "model": "RAV4 Hybrid",
+    "consumptionRate": "5.1",
+    "tankCapacity": null,
+    "fuelType": "PETROL_95",
+    "source": "Toyota Singapore model page (toyota.com.sg). Checked 16 Oct 2026.",
+    "vehicleClass": "PASSENGER_CAR_LGV_TAXI"
+  },
+  {
+    "make": "Toyota",
+    "model": "Hiace Van 2.8 Diesel",
+    "consumptionRate": "8.7",
+    "tankCapacity": "70",
+    "fuelType": "DIESEL",
+    "source": "Toyota Singapore brochure (toyota.com.sg); 11.5 km/L, Japan WLTP. Checked 16 Oct 2026.",
+    "vehicleClass": "PASSENGER_CAR_LGV_TAXI"
+  },
+  {
+    "make": "Toyota",
+    "model": "Hiace Van 2.0 Petrol",
+    "consumptionRate": "10.6",
+    "tankCapacity": "70",
+    "fuelType": "PETROL_95",
+    "source": "Toyota Singapore brochure (toyota.com.sg); 9.4 km/L, Japan WLTP. Checked 16 Oct 2026.",
+    "vehicleClass": "PASSENGER_CAR_LGV_TAXI"
+  },
+  {
+    "make": "Honda",
+    "model": "Civic 1.5 Turbo",
+    "consumptionRate": "6.4",
+    "tankCapacity": "47",
+    "fuelType": "PETROL_95",
+    "source": "Honda Singapore model page (honda.com.sg). Checked 16 Oct 2026.",
+    "vehicleClass": "PASSENGER_CAR_LGV_TAXI"
+  },
+  {
+    "make": "Honda",
+    "model": "Civic e:HEV 2.0",
+    "consumptionRate": "4.6",
+    "tankCapacity": "40",
+    "fuelType": "PETROL_95",
+    "source": "Honda Singapore model page (honda.com.sg). Checked 16 Oct 2026.",
+    "vehicleClass": "PASSENGER_CAR_LGV_TAXI"
+  },
+  {
+    "make": "Honda",
+    "model": "HR-V (Vezel) 1.5",
+    "consumptionRate": "6.1",
+    "tankCapacity": "40",
+    "fuelType": "PETROL_95",
+    "source": "Honda Singapore model page (honda.com.sg). Checked 16 Oct 2026.",
+    "vehicleClass": "PASSENGER_CAR_LGV_TAXI"
+  },
+  {
+    "make": "Honda",
+    "model": "HR-V (Vezel) e:HEV 1.5",
+    "consumptionRate": "4.9",
+    "tankCapacity": "40",
+    "fuelType": "PETROL_95",
+    "source": "Honda Singapore model page (honda.com.sg). Checked 16 Oct 2026.",
+    "vehicleClass": "PASSENGER_CAR_LGV_TAXI"
+  },
+  {
+    "make": "Honda",
+    "model": "Freed 1.5",
+    "consumptionRate": "5.1",
+    "tankCapacity": "42",
+    "fuelType": "PETROL_95",
+    "source": "Honda Singapore model page (honda.com.sg). Checked 16 Oct 2026.",
+    "vehicleClass": "PASSENGER_CAR_LGV_TAXI"
+  },
+  {
+    "make": "Honda",
+    "model": "Jazz Crosstar e:HEV 1.5",
+    "consumptionRate": "4.5",
+    "tankCapacity": "40",
+    "fuelType": "PETROL_95",
+    "source": "Honda Singapore model page (honda.com.sg). Checked 16 Oct 2026.",
+    "vehicleClass": "PASSENGER_CAR_LGV_TAXI"
+  },
+  {
+    "make": "Honda",
+    "model": "Accord 2.0",
+    "consumptionRate": "5.0",
+    "tankCapacity": "48.5",
+    "fuelType": "PETROL_95",
+    "source": "Honda Singapore model page (honda.com.sg). Checked 16 Oct 2026.",
+    "vehicleClass": "PASSENGER_CAR_LGV_TAXI"
+  },
+  {
+    "make": "Honda",
+    "model": "ZR-V e:HEV 2.0",
+    "consumptionRate": "5.7",
+    "tankCapacity": "57",
+    "fuelType": "PETROL_95",
+    "source": "Honda Singapore model page (honda.com.sg). Checked 16 Oct 2026.",
+    "vehicleClass": "PASSENGER_CAR_LGV_TAXI"
+  },
+  {
+    "make": "Honda",
+    "model": "CR-V 1.5 Turbo 5-seater",
+    "consumptionRate": "7.4",
+    "tankCapacity": "57",
+    "fuelType": "PETROL_95",
+    "source": "Honda Singapore model page (honda.com.sg). Checked 16 Oct 2026.",
+    "vehicleClass": "PASSENGER_CAR_LGV_TAXI"
+  },
+  {
+    "make": "Honda",
+    "model": "CR-V 1.5 Turbo 7-seater",
+    "consumptionRate": "7.5",
+    "tankCapacity": "57",
+    "fuelType": "PETROL_95",
+    "source": "Honda Singapore model page (honda.com.sg). Checked 16 Oct 2026.",
+    "vehicleClass": "PASSENGER_CAR_LGV_TAXI"
+  },
+  {
+    "make": "Nissan",
+    "model": "Serena e-POWER",
+    "consumptionRate": "5.1",
+    "tankCapacity": "52",
+    "fuelType": "PETROL_95",
+    "source": "Nissan Singapore specifications (nissan.com.sg), combined. Checked 16 Oct 2026.",
+    "vehicleClass": "PASSENGER_CAR_LGV_TAXI"
+  },
+  {
+    "make": "Nissan",
+    "model": "Kicks e-POWER",
+    "consumptionRate": "4.6",
+    "tankCapacity": "41",
+    "fuelType": "PETROL_95",
+    "source": "Nissan Singapore specifications (nissan.com.sg), combined. Checked 16 Oct 2026.",
+    "vehicleClass": "PASSENGER_CAR_LGV_TAXI"
+  },
+  {
+    "make": "Kia",
+    "model": "Cerato 1.6",
+    "consumptionRate": "6.6",
+    "tankCapacity": "50",
+    "fuelType": "PETROL_95",
+    "source": "Kia Singapore spec sheet (kia.com/sg) (2022). Checked 16 Oct 2026.",
+    "vehicleClass": "PASSENGER_CAR_LGV_TAXI"
+  },
+  {
+    "make": "Kia",
+    "model": "Seltos 1.4 Turbo",
+    "consumptionRate": "6.3",
+    "tankCapacity": "55",
+    "fuelType": "PETROL_95",
+    "source": "Kia Singapore spec sheet (kia.com/sg) (2022). Checked 16 Oct 2026.",
+    "vehicleClass": "PASSENGER_CAR_LGV_TAXI"
+  },
+  {
+    "make": "Mazda",
+    "model": "Mazda3 1.5 M Hybrid",
+    "consumptionRate": "5.9",
+    "tankCapacity": "51",
+    "fuelType": "PETROL_95",
+    "source": "Mazda Singapore spec sheet (mazda.com.sg). Checked 16 Oct 2026.",
+    "vehicleClass": "PASSENGER_CAR_LGV_TAXI"
+  },
+  {
+    "make": "Mazda",
+    "model": "Mazda2 1.5",
+    "consumptionRate": "5.2",
+    "tankCapacity": "44",
+    "fuelType": "PETROL_95",
+    "source": "Mazda Singapore spec sheet (mazda.com.sg). Checked 16 Oct 2026.",
+    "vehicleClass": "PASSENGER_CAR_LGV_TAXI"
+  },
+  {
+    "make": "Hyundai",
+    "model": "Avante 1.6",
+    "consumptionRate": "6.5",
+    "tankCapacity": "47",
+    "fuelType": "PETROL_95",
+    "source": "Hyundai Korea catalogue (hyundai.com), Korean test cycle; 15.4 km/L. Checked 16 Oct 2026.",
+    "vehicleClass": "PASSENGER_CAR_LGV_TAXI"
+  },
+  {
+    "make": "Hyundai",
+    "model": "Avante Hybrid 1.6",
+    "consumptionRate": "4.7",
+    "tankCapacity": "42",
+    "fuelType": "PETROL_95",
+    "source": "Hyundai Korea catalogue (hyundai.com), Korean test cycle; 21.1 km/L. Checked 16 Oct 2026.",
+    "vehicleClass": "PASSENGER_CAR_LGV_TAXI"
+  },
+  {
+    "make": "Hyundai",
+    "model": "Kona Hybrid 1.6",
+    "consumptionRate": "5.2",
+    "tankCapacity": "38",
+    "fuelType": "PETROL_95",
+    "source": "Hyundai Korea catalogue (hyundai.com), Korean test cycle; 19.3 km/L. Checked 16 Oct 2026.",
+    "vehicleClass": "PASSENGER_CAR_LGV_TAXI"
+  },
+  {
+    "make": "BMW",
+    "model": "X1 sDrive16i",
+    "consumptionRate": "6.8",
+    "tankCapacity": "54",
+    "fuelType": "PETROL_95",
+    "source": "BMW Singapore technical data (bmw.com.sg), WLTP combined. Checked 16 Oct 2026.",
+    "vehicleClass": "PASSENGER_CAR_LGV_TAXI"
+  },
+  {
+    "make": "Honda",
+    "model": "PCX125",
+    "consumptionRate": "2.1",
+    "tankCapacity": "8.1",
+    "fuelType": "PETROL_95",
+    "vehicleClass": "MOTORCYCLE",
+    "source": "1000PS model page (1000ps.com), Honda PCX125 DX 2026: 2.1 L/100 km, 8.1 L tank. Petrol 95 assumed. Checked 18 Oct 2026."
+  },
+  {
+    "make": "Honda",
+    "model": "Super Cub C125",
+    "consumptionRate": "1.5",
+    "tankCapacity": "3.7",
+    "fuelType": "PETROL_95",
+    "vehicleClass": "MOTORCYCLE",
+    "source": "1000PS model page (1000ps.com), Honda Super Cub C 125 2026: 1.5 L/100 km, 3.7 L tank. Petrol 95 assumed. Checked 18 Oct 2026."
+  },
+  {
+    "make": "Honda",
+    "model": "Forza 350",
+    "consumptionRate": "3.4",
+    "tankCapacity": "11.7",
+    "fuelType": "PETROL_95",
+    "vehicleClass": "MOTORCYCLE",
+    "source": "1000PS model page (1000ps.com), Honda Forza 350 2026: 3.4 L/100 km, 11.7 L tank. Petrol 95 assumed. Checked 18 Oct 2026."
+  },
+  {
+    "make": "Honda",
+    "model": "NX500",
+    "consumptionRate": "3.6",
+    "tankCapacity": "17.5",
+    "fuelType": "PETROL_95",
+    "vehicleClass": "MOTORCYCLE",
+    "source": "1000PS model page (1000ps.com), Honda NX500 2026: 3.6 L/100 km, 17.5 L tank. Petrol 95 assumed. Checked 18 Oct 2026."
+  },
+  {
+    "make": "Yamaha",
+    "model": "NMAX 155",
+    "consumptionRate": "2.4",
+    "tankCapacity": "7.1",
+    "fuelType": "PETROL_95",
+    "vehicleClass": "MOTORCYCLE",
+    "source": "1000PS model page (1000ps.com), Yamaha NMAX 155 Tech MAX 2026: 2.4 L/100 km, 7.1 L tank. Petrol 95 assumed. Checked 18 Oct 2026."
+  },
+  {
+    "make": "Yamaha",
+    "model": "XMAX 300",
+    "consumptionRate": "3.0",
+    "tankCapacity": "13",
+    "fuelType": "PETROL_95",
+    "vehicleClass": "MOTORCYCLE",
+    "source": "1000PS model page (1000ps.com), Yamaha XMAX 300 2024: 3.0 L/100 km, 13 L tank. Petrol 95 assumed. Checked 18 Oct 2026."
+  },
+  {
+    "make": "Yamaha",
+    "model": "MT-07",
+    "consumptionRate": "4.2",
+    "tankCapacity": "14",
+    "fuelType": "PETROL_95",
+    "vehicleClass": "MOTORCYCLE",
+    "source": "1000PS model page (1000ps.com), Yamaha MT-07 2026: 4.2 L/100 km, 14 L tank. Petrol 95 assumed. Checked 18 Oct 2026."
+  },
+  {
+    "make": "Kawasaki",
+    "model": "Ninja 400",
+    "consumptionRate": "3.9",
+    "tankCapacity": "14",
+    "fuelType": "PETROL_95",
+    "vehicleClass": "MOTORCYCLE",
+    "source": "Motorrad und Reisen database (motorradundreisen.de), Kawasaki Ninja 400 2025, manufacturer figure: 3.9 L/100 km, 14 L tank. Petrol 95 assumed. Checked 18 Oct 2026."
+  },
+  {
+    "make": "Kawasaki",
+    "model": "Ninja 500",
+    "consumptionRate": "3.8",
+    "tankCapacity": "14",
+    "fuelType": "PETROL_95",
+    "vehicleClass": "MOTORCYCLE",
+    "source": "1000PS model page (1000ps.com), Kawasaki Ninja 500: 3.8 L/100 km, 14 L tank. Petrol 95 assumed. Checked 18 Oct 2026."
+  }
+]

@@ -1,0 +1,22 @@
+node_modules/
+dist/
+*.log
+.DS_Store
+Thumbs.db
+
+# environment files (backend/.env is created from backend/.env.example on install)
+.env
+.env.*
+!.env.example
+
+# local databases
+*.db
+*.db-journal
+backend/prisma/*.db*
+
+# test output
+frontend/playwright-report/
+frontend/test-results/
+coverage/
+.review/
+backend/test/lab4/results/
